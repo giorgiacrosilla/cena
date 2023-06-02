@@ -11,73 +11,95 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play CENA.</tw-noscript></noscript></tw-story>
 <tw-storydata name="CENA" startnode="28" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="81BE0AE5-07E1-4622-9F0F-C778087AAB25" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
 
-tw-story {
-  background-color:black;
-  background-size: cover;
+tw-story[tags="mappa"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/thumbnail_IMG_3099.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: fixed;
 }
 
-tw-icon {
-  position: ;
+tw-story[tags="mappa-indiano"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/thumbnail_IMG_3100.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: fixed;
 }
+
 
 tw-story[tags="diario"] { 
   background-image: url('https://img.freepik.com/premium-photo/empty-old-vintage-page-paper-texture-background_51524-2659.jpg');
-  background-size: cover;
+  background-position: 0% 0%;
+  background-size: 100% 100%;
   color: black;
   font-style: italic;
 }
 
+
 tw-passage {
   font: "font-family: 'EB Garamond', serif;";
+  color: white;
+  font-size: 20px;
   position: fixed;
-  left: 50vw;
-  right: 2vw;
-  top: 2vh;
-  bottom: 2vh;
+  left: 57vw;
+  right: 3vw;
+  top: 5vh;
+  bottom: 5vh;
   overflow: auto;
-  border-radius: 10px 10px 10px 10px;
-  padding:15px 10px 15px 10px;
+  padding:10px 10px 10px 10px;
   
 }
+tw-passage[tags="diario"] {
+ color: black; 
+}
 
-
- </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
+tw-passage[tags="form"] {
+  background-color: #E9E0D8;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  padding: 0px,0px,0px,0px;
+  overflow: hidden;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
 [[1]]
 [[2]]
 </tw-passagedata><tw-passagedata pid="2" name="1" tags="" position="1000,275" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
 
 
-[[Continue -&gt;1.1]]</tw-passagedata><tw-passagedata pid="3" name="2" tags="" position="1125,275" size="100,100">Choose one of the two items: 
+[[Continue -&gt;1.1]]</tw-passagedata><tw-passagedata pid="3" name="2" tags="" position="1300,150" size="100,100">Choose one of the two items: 
 
-[[&lt;img src=&quot;Open-book-isolated-on-transparent-background-PNG.png&quot; width=&quot;70px&quot;&gt;-&gt;Diary]]
-[[&lt;img src=&quot;1467267.png&quot; width=&quot;100px&quot;&gt;-&gt;Feather]]</tw-passagedata><tw-passagedata pid="4" name="1.1" tags="" position="1000,400" size="100,100">(live: 1s)[(t8n:&quot;dissolve&quot;)[I am in the middle of my trip to North America to study fossils and rocks. ](stop:)]
-(live: 3s)[(t8n:&quot;dissolve&quot;)[I have decided to deviate from the agreed route to visit the village of Black Bird in Nebraska.](stop:)]
-(live: 5s)[(t8n:&quot;dissolve&quot;)[It&#39;s the 30th of September 1863...](stop:)]
-
-
-
-(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.2]](stop:)]</tw-passagedata><tw-passagedata pid="5" name=" 1.2" tags="" position="1000,525" size="100,100">(live: 1s)[(t8n:&quot;dissolve&quot;)[I reach the indigenous village with an interpreter and I glance at the tents and horses. ](stop:)]
-(live: 3s)[(t8n:&quot;dissolve&quot;)[I can see the indigenous people dressed in the traditional way.](stop:)]
-(live: 5s)[(t8n:&quot;dissolve&quot;)[There&#39;s a man outside the biggest tent that seems to be the chieftain.](stop:)]
-(live: 7s)[(t8n:&quot;dissolve&quot;)[What do I do?](stop:)]
+[[&lt;img src=&quot;https://github.com/giorgiacrosilla/cena/blob/main/Open-book-isolated-on-transparent-background-PNG.png?raw=true&quot; width=&quot;70px&quot;&gt;-&gt;Diary]]
+[[&lt;img src=&quot;https://github.com/giorgiacrosilla/cena/blob/main/1467267.png?raw=true&quot; width=&quot;70px&quot;&gt;-&gt;Feather]]</tw-passagedata><tw-passagedata pid="4" name="1.1" tags="mappa" position="1000,400" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I am in the middle of my trip to North America to study fossils and rocks. ](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I have decided to deviate from the agreed route to visit the village of Black Bird in Nebraska.](stop:)]
+(live: 4s)[(t8n:&quot;dissolve&quot;)[It&#39;s the 30th of September 1863...](stop:)]
 
 
-(live: 8s)[(transition-arrive:&quot;dissolve&quot;)[[I go there and talk to him]](stop:)]
-(live: 8s)[(transition-arrive:&quot;dissolve&quot;)[[ I explore a little bit more the village]](stop:)]</tw-passagedata><tw-passagedata pid="6" name="I go there and talk to him" tags="" position="1000,650" size="100,100">(live: 1s)[(t8n:&quot;dissolve&quot;)[I enter the tent and we immediately exchange a respectful greeting. Then, we sit in front of each other.](stop:)]
 
-(live: 3s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
+(live: 5s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.2]](stop:)]</tw-passagedata><tw-passagedata pid="5" name=" 1.2" tags="" position="1000,525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I reach the indigenous village with an interpreter and I glance at the tents and horses. ](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I can see the indigenous people dressed in the traditional way.](stop:)]
+(live: 4s)[(t8n:&quot;dissolve&quot;)[There&#39;s a man outside the biggest tent that seems to be the chieftain.](stop:)]
+(live: 6s)[(t8n:&quot;dissolve&quot;)[What do I do?](stop:)]
 
-(live: 6s)[(t8n:&quot;dissolve&quot;)[He answers that his name is Ne-hi-ga-kuh and he&#39;s the chieftain of the Ponkas tribe. His tribe is temporarily allied with the Omahas and so they have been invited to stay at Black Bird because they did not want to fight in the war and their harvest was rotten.](stop:)]
 
-(live: 8s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.3]](stop:)]</tw-passagedata><tw-passagedata pid="7" name=" I explore a little bit more the village" tags="" position="1125,650" size="100,100">(live: 1s)[(t8n:&quot;dissolve&quot;)[I immediately see something that captures my attention: some indigenous children, dressed like europeans, are coming back home escorted by soldiers.](stop:)] 
-(live: 3s)[(t8n:&quot;dissolve&quot;)[Their mothers are waiting for them.](stop:)] 
-(live: 5s)[(t8n:&quot;dissolve&quot;)[One of the children sees me and gives me a weird look. ](stop:)] 
-(live: 7s)[(t8n:&quot;dissolve&quot;)[He has recognized me as a stranger. ](stop:)] 
-(live: 9s)[(t8n:&quot;dissolve&quot;)[He comes closer and asks, in english, why I am there.](stop:)] 
-(live: 11s)[(t8n:&quot;dissolve&quot;)[I am astonished to hear a child speak english so well. ](stop:)] 
-(live: 13s)[(t8n:&quot;dissolve&quot;)[The child sees my reaction and thinks that I am there to talk to the chieftain so he takes me to the chieftain&#39;s tent. ](stop:)] 
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[[I go there and talk to him]](stop:)]
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[[ I explore a little bit more the village]](stop:)]</tw-passagedata><tw-passagedata pid="6" name="I go there and talk to him" tags="" position="1000,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I enter the tent and we immediately exchange a respectful greeting. Then, we sit in front of each other.](stop:)]
 
-(live: 14s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt;I go there and talk to him]] (stop:)]</tw-passagedata><tw-passagedata pid="8" name=" 1.3" tags="" position="1000,775" size="100,100">What do I do now?
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
+
+(live: 5s)[(t8n:&quot;dissolve&quot;)[He answers that his name is Ne-hi-ga-kuh and he&#39;s the chieftain of the Ponkas tribe. His tribe is temporarily allied with the Omahas and so they have been invited to stay at Black Bird because they did not want to fight in the war and their harvest was rotten.](stop:)]
+
+(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.3]](stop:)]</tw-passagedata><tw-passagedata pid="7" name=" I explore a little bit more the village" tags="" position="850,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I immediately see something that captures my attention: some indigenous children, dressed like europeans, are coming back home escorted by soldiers.](stop:)] 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[Their mothers are waiting for them.](stop:)] 
+(live: 4s)[(t8n:&quot;dissolve&quot;)[One of the children sees me and gives me a weird look. ](stop:)] 
+(live: 6s)[(t8n:&quot;dissolve&quot;)[He has recognized me as a stranger. ](stop:)] 
+(live: 8s)[(t8n:&quot;dissolve&quot;)[He comes closer and asks, in english, why I am there.](stop:)] 
+(live: 10s)[(t8n:&quot;dissolve&quot;)[I am astonished to hear a child speak english so well. ](stop:)] 
+(live: 12s)[(t8n:&quot;dissolve&quot;)[The child sees my reaction and thinks that I am there to talk to the chieftain so he takes me to the chieftain&#39;s tent. ](stop:)] 
+
+(live: 13s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt;I go there and talk to him]] (stop:)]</tw-passagedata><tw-passagedata pid="8" name=" 1.3" tags="" position="1000,775" size="100,100">What do I do now?
 
 [[Do I want to know more about the children of the village?]]
 [[Do I want to tell the chieftain who I am and why I am there?]]</tw-passagedata><tw-passagedata pid="9" name="Do I want to know more about the children of the village?" tags="" position="1000,900" size="100,100">The chieftain explains that the children are separated from their parents and sent to the mission to learn english and the christian religion.
@@ -91,7 +113,7 @@ I introduce myself to him saying that I am very interested in knowing more about
 
 [[Continue -&gt; 1.4]]</tw-passagedata><tw-passagedata pid="10" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
-I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life.. So I&#39;d like to learn that from you. 
+I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
 [[Continue -&gt;1.14]]</tw-passagedata><tw-passagedata pid="11" name=" 1.4" tags="" position="1000,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
 
@@ -126,7 +148,7 @@ I can decide to know a little bit more about the traditional dances or I can sit
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
-(link: &quot;Continue&quot;)[(goto-url: &#39;https://ehevhqeq.paperform.co&#39;)]</tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1125,1775" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+[[Continue]] </tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1125,1775" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that have been killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -135,8 +157,8 @@ He was invited to visit Washington city along with the government agent and some
 Before his death, Black Bird told some of his warriors where and how he wanted to be buried. 
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
-&lt;audio controls autoplay src=&quot;ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
-(link: &quot;Continue&quot;)[(goto-url: &#39;https://ehevhqeq.paperform.co&#39;)]</tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the members of the tribe to take a portrait of him and he agrees. 
+&lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
+[[Continue]]</tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
 
@@ -160,7 +182,13 @@ What do I do now?
 
 [[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="25" name="Refuse the gift" tags="" position="1250,1400" size="100,100">I do not accept the gift because I am sympathetic with him.
 
-[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="26" name="Diary" tags="" position="1250,400" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Feather" tags="" position="1125,400" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">Choose a language: 
+[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="26" name="Diary" tags="" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
+
+
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="Feather" tags="" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
+
+
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">Choose a language: 
 
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png&quot; width=&quot;50px&quot;&gt;-&gt;Users]]
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1024px-Flag_of_Italy.svg.png&quot; width=&quot;50&quot;&gt;-&gt;Utenti]]</tw-passagedata><tw-passagedata pid="29" name="Utenti" tags="" position="500,150" size="100,100">Quanti utenti sono coinvolti?
@@ -172,7 +200,7 @@ What do I do now?
 [[Continua -&gt;1.02]]</tw-passagedata><tw-passagedata pid="31" name=" 2.01" tags="" position="375,275" size="100,100">Choose one of the two items: 
 
 [[&lt;img src=&quot;Open-book-isolated-on-transparent-background-PNG.png&quot; width=&quot;70px&quot;&gt;-&gt;Diario]]
-[[&lt;img src=&quot;1467267.png&quot; width=&quot;100px&quot;&gt;-&gt;Piuma]]</tw-passagedata><tw-passagedata pid="32" name="Diario" tags="" position="250,150" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="Piuma" tags="" position="250,275" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="1.02" tags="" position="500,400" size="100,100">Mi trovo nel bel mezzo del mio viaggio in Nord America per studiare fossili e rocce. 
+[[&lt;img src=&quot;1467267.png&quot; width=&quot;70px&quot;&gt;-&gt;Piuma]]</tw-passagedata><tw-passagedata pid="32" name="Diario" tags="" position="250,150" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="Piuma" tags="" position="250,275" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="1.02" tags="mappa" position="500,400" size="100,100">Mi trovo nel bel mezzo del mio viaggio in Nord America per studiare fossili e rocce. 
 Ho deciso di deviare dal percorso prestabilito per visitare il villaggio di Black Bird in Nebraska.
 è il 30 settembre 1863...
 
@@ -184,17 +212,23 @@ C&#39;è un uomo fuori dalla tenda più grande e intuisco che possa essere il ca
 Cosa faccio?
 
 [[Vado direttamente da lui]]
-[[Mi guardo ancora un po&#39; intorno]]</tw-passagedata><tw-passagedata pid="36" name="Mi guardo ancora un po&#39; intorno" tags="" position="375,650" size="100,100">[[Continue -&gt; 1.04]]</tw-passagedata><tw-passagedata pid="37" name="Vado direttamente da lui" tags="" position="500,650" size="100,100">[[Continue -&gt; 1.04]]</tw-passagedata><tw-passagedata pid="38" name="1.19" tags="" position="1400,1475" size="100,100">What do I do now?
+[[Mi guardo ancora un po&#39; intorno]]</tw-passagedata><tw-passagedata pid="36" name="Mi guardo ancora un po&#39; intorno" tags="" position="375,650" size="100,100">[[Continue -&gt; 1.04]]</tw-passagedata><tw-passagedata pid="37" name="Vado direttamente da lui" tags="" position="500,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[Entro nella tenda e ci scambiamo un rispettoso cenno di saluto. Poi ci sediamo l&#39;uno di fronte all&#39;altro.](stop:)]
+
+(live: 2s)[(t8n:&quot;dissolve&quot;)[Sono molto curioso perchè non ho mai incontrato una tribù indigena prima, quindi chiedo al capo villaggio come si chiama e ulteriori informazioni sulla sua tribù.](stop:)] 
+
+(live: 5s)[(t8n:&quot;dissolve&quot;)[Risponde che il suo nome è Ne-hi-ga-kuh e che è il capo della tribù dei Ponkas. Dato che non voleva combattere nella guerra e il suo raccolto era completamente andato a male, la sua tribù è temporaneamente alleata con gli Omahas, che li hanno invitati a vivere a Black Bird.](stop:)]
+
+(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.04]](stop:)]
+</tw-passagedata><tw-passagedata pid="38" name="1.19" tags="" position="1275,1650" size="100,100">What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
 [[Dances -&gt;1.20]]
 [[Story -&gt;1.21]]
-
-&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;Calumet&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/4cb7006e761c42509348533bddb831e6/embed&quot;&gt; &lt;/iframe&gt; &lt;p style=&quot;font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;&quot;&gt; &lt;a href=&quot;https://sketchfab.com/3d-models/calumet-4cb7006e761c42509348533bddb831e6?utm_medium=embed&amp;utm_campaign=share-popup&amp;utm_content=4cb7006e761c42509348533bddb831e6&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; style=&quot;font-weight: bold; color: #1CAAD9;&quot;&gt; Calumet &lt;/a&gt; &lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="1.20" tags="diario" position="1400,1600" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
+</tw-passagedata><tw-passagedata pid="39" name="1.20" tags="diario" position="1250,1775" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
-</tw-passagedata><tw-passagedata pid="40" name="1.21" tags="diario" position="1525,1600" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+</tw-passagedata><tw-passagedata pid="40" name="1.21" tags="diario" position="1375,1775" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that were killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -204,13 +238,342 @@ Before his death, Black Bird told some of his warriors where and how he wanted t
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
 &lt;audio controls autoplay src=&quot;C:\Users\crosi\Downloads\ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="41" name=" 1.04" tags="" position="500,775" size="100,100">[[Voglio saperne di più sui bambini del villaggio]]
-[[Racconto di più su chi sono]]</tw-passagedata><tw-passagedata pid="42" name="Voglio saperne di più sui bambini del villaggio" tags="" position="500,900" size="100,100">[[Continue -&gt;1.05]]</tw-passagedata><tw-passagedata pid="43" name="Racconto di più su chi sono" tags="" position="625,900" size="100,100">[[Continue -&gt; 1.005]]</tw-passagedata><tw-passagedata pid="44" name="1.05" tags="" position="500,1025" size="100,100">[[Continue -&gt; 1.06]]</tw-passagedata><tw-passagedata pid="45" name=" 1.06" tags="" position="500,1150" size="100,100">[[Continue -&gt; 1.07]]</tw-passagedata><tw-passagedata pid="46" name=" 1.07" tags="" position="500,1275" size="100,100">[[Continue -&gt; 1.08]]</tw-passagedata><tw-passagedata pid="47" name=" 1.08" tags="" position="500,1400" size="100,100">[[Accetto]]
+[[Racconto di più su chi sono]]</tw-passagedata><tw-passagedata pid="42" name="Voglio saperne di più sui bambini del villaggio" tags="" position="500,900" size="100,100">Il capo villaggio mi spiega che i bambini vengono separati dai loro genitori e mandati alla missione cattolica per occidentalizzarsi e imparare l&#39;inglese.
+
+Ogni volta che tornano a casa non riconoscono più il modo di vivere dei loro genitori, rifiutano le tradizioni e sperano di poter lasciare definitivamente il villaggio in futuro.
+In questo modo la loro comunità sparirà presto.
+
+Condivido il punto di vista del capo perchè penso che questa minoranza e la sua cultura debbano essere preservate. 
+
+[[Continue -&gt;1.05]]</tw-passagedata><tw-passagedata pid="43" name="Racconto di più su chi sono" tags="" position="625,900" size="100,100">[[Continue -&gt; 1.005]]</tw-passagedata><tw-passagedata pid="44" name="1.05" tags="" position="500,1025" size="100,100">[[Continue -&gt; 1.06]]</tw-passagedata><tw-passagedata pid="45" name=" 1.06" tags="" position="500,1150" size="100,100">[[Continue -&gt; 1.07]]</tw-passagedata><tw-passagedata pid="46" name=" 1.07" tags="" position="500,1275" size="100,100">[[Continue -&gt; 1.08]]</tw-passagedata><tw-passagedata pid="47" name=" 1.08" tags="" position="500,1400" size="100,100">[[Accetto]]
 [[Rifiuto]]</tw-passagedata><tw-passagedata pid="48" name="Accetto" tags="" position="500,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="49" name="Rifiuto" tags="" position="625,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="50" name=" 1.09" tags="" position="500,1650" size="100,100">[[Danze]]
 [[Storia]]</tw-passagedata><tw-passagedata pid="51" name="Danze" tags="" position="437.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="52" name="Storia" tags="" position="562.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="53" name=" 1.005" tags="" position="625,1025" size="100,100">[[Continue -&gt; 1.006]]</tw-passagedata><tw-passagedata pid="54" name=" 1.006" tags="" position="625,1150" size="100,100">[[Continue -&gt; 1.007]]</tw-passagedata><tw-passagedata pid="55" name=" 1.007" tags="" position="625,1275" size="100,100">[[Continue -&gt; 1.008]]</tw-passagedata><tw-passagedata pid="56" name=" 1.008" tags="" position="625,1400" size="100,100">Il capo ordina ad un membro della tribù di regalarmi una pipa tradizionale, chiamata calumet, e lui se ne separa molto dolorosamente. All&#39;inizio non capisco il perchè, poi mi spiegano che quella pipa è sua, aveva un valore affettivo e ora ne sarebbe rimasto senza. 
 [[Accetto -&gt; Accetto il regalo]]
 [[ Rifiuto -&gt; Rifiuto il regalo]]</tw-passagedata><tw-passagedata pid="57" name=" Accetto il regalo" tags="" position="750,1525" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="58" name=" Rifiuto il regalo" tags="" position="750,1400" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="59" name=" 1.009" tags="" position="875,1525" size="100,100">[[Danze -&gt;Danze1]]
 [[ Storia -&gt; Storia1]]
-</tw-passagedata><tw-passagedata pid="60" name="Danze1" tags="" position="875,1650" size="100,100"></tw-passagedata><tw-passagedata pid="61" name=" Storia1" tags="" position="750,1650" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="60" name="Danze1" tags="" position="875,1650" size="100,100"></tw-passagedata><tw-passagedata pid="61" name=" Storia1" tags="" position="750,1650" size="100,100"></tw-passagedata><tw-passagedata pid="62" name="2.1" tags="" position="1500,300" size="100,100">Ne-ki-ga-huh: 
+I am the chieftain of the Ponkas tribe. 
+My tribe recently has decided to ally with the Omahas so we have moved to Black Bird in order to run away from the war.
+It&#39;s the 30th of September 1863...
+
+Capellini:
+I am in the middle of my trip to North America to study fossils and rocks. 
+I have decided to deviate from the agreed route to visit the village of Black Bird in Nebraska.
+It&#39;s the 30th of September 1863..
+
+[[Continue -&gt;decisione]]
+</tw-passagedata><tw-passagedata pid="63" name="decisione" tags="" position="1500,425" size="100,100">Ne-ki-ga-huh:
+I see a group of &quot;pale faces&quot; arriving at the village. 
+There are children coming back to their parents&#39; tents escorted by soldiers.
+I recognize everyone apart from one man.
+What do I do?
+(if: $a is &gt; 0 or $b is &gt; 0) [You have already made your decision]
+(else:) [
+(link: &quot;I talk to him&quot;)[\
+	(set: $a to it + 1)\
+	(go-to: &quot;decisione&quot;)\
+]
+(link: &quot;I observe what his intentions are&quot;)[\
+	(set: $b to it + 1)\
+	(go-to: &quot;decisione&quot;)\
+]]
+Capellini:
+I reach the indigenous village with an interpreter and I glance at the tents and horses. 
+I can see the indigenous people dressed in the traditional way.
+There&#39;s a man outside the biggest tent that seems to be the chieftain.
+What do I do?
+(if: $c is &gt; 0 or $d is &gt;0) [You have already made your decision]
+(else:) [
+(link: &quot;I go there and talk to him&quot;)[\
+	(set: $c to it + 1)\
+	(go-to: &quot;decisione&quot;)\
+]
+(link: &quot;I explore the village a little bit more&quot;)[\
+	(set: $d to it + 1)\
+	(go-to: &quot;decisione&quot;)\
+]]
+
+(if: $a is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]]
+(if: $a is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]]
+(if: $b is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]]
+(if: $b is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]]
+
+
+</tw-passagedata><tw-passagedata pid="64" name="parlo" tags="" position="1425,575" size="100,100">Capellini:
+We exchange a respectful greeting and then we sit in front of each other, near the fire.
+
+I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.
+
+Ne-ki-ga-huh:
+My name is Ne-hi-ga-kuh and I&#39;m the chieftain of the Ponkas tribe. My tribe is temporarily allied with the Omahas and so we have been invited to stay at Black Bird because we did not want to fight in the war and our harvest was rotten.
+
+I am very curious about this &quot;pale face&quot; because he has lots of objects that I have never seen before and his behavior seems totally different from the other &quot;pale faces&quot; that I&#39;ve met before. 
+
+[[Continue-&gt;choice]]</tw-passagedata><tw-passagedata pid="65" name="osservo" tags="" position="1600,575" size="100,100">Ne-ki-ga-huh:
+Suddenly a child approaches the stranger and so I have the chance to study his behavior towards the members of our tribe. 
+
+Capellini:
+I immediately see something that captures my attention: some indigenous children, dressed like europeans, are coming back home escorted by soldiers.
+Their mothers are waiting for them.
+One of the children sees me and gives me a weird look.  
+He has recognized me as a stranger. 
+He comes closer and asks, in english, why I am there.
+I am astonished to hear a child speak english so well. 
+The child sees my reaction and thinks that I am there to talk to the chieftain so he takes me to the chieftain&#39;s tent. 
+
+[[[Continue -&gt;parlo]]</tw-passagedata><tw-passagedata pid="66" name="choice" tags="" position="1500,700" size="100,100">Ne-ki-ga-kuh:
+What do I do?
+(if: $e is &gt; 0 or $f is &gt; 0) [You have already made your decision]
+(else:) [
+(link: &quot;Do I listen to what the man has to tell me?&quot;)[\
+	(set: $e to it + 1)\
+	(go-to: &quot;choice&quot;)\
+]
+(link: &quot;Do I ask him who he is?&quot;)[\
+	(set: $f to it + 1)\
+	(go-to: &quot;choice&quot;)\
+]]
+Capellini:
+What do I do?
+(if: $g is &gt; 0 or $h is &gt; 0) [You have already made your decision]
+(else:) [
+(link: &quot;Do I want to tell the chieftain who I am and why I am there? &quot;)[\
+	(set: $g to it + 1)\
+	(go-to: &quot;choice&quot;)\
+]
+(link: &quot;Do I want to know more about the children of the village?&quot;)[\
+	(set: $h to it + 1)\
+	(go-to: &quot;choice&quot;)\
+]]
+
+(if: $e is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]]
+(if: $e is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
+(if: $f is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]]
+(if: $f is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
+</tw-passagedata><tw-passagedata pid="67" name="capellini" tags="" position="1425,825" size="100,100">Capellini: 
+I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
+I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
+I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
+
+[[Continue -&gt;2.4]]</tw-passagedata><tw-passagedata pid="68" name="children" tags="" position="1600,825" size="100,100">[[Continue -&gt;2.04]]</tw-passagedata><tw-passagedata pid="69" name="Continue" tags="form" position="1125,1900" size="100,100">
+    &lt;iframe
+      id=&quot;JotFormIFrame-231492455133352&quot;
+      title=&quot;Explorer&quot;
+      onload=&quot;window.parent.scrollTo(0,0)&quot;
+      allowtransparency=&quot;true&quot;
+      allowfullscreen=&quot;true&quot;
+      allow=&quot;geolocation; microphone; camera&quot;
+      src=&quot;https://form.jotform.com/231492455133352&quot;
+      frameborder=&quot;0&quot;
+      style=&quot;min-width:100%;max-width:100%;height:539px;border:none;&quot;
+      scrolling=&quot;no&quot;
+    &gt;
+    &lt;/iframe&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    var ifr = document.getElementById(&quot;JotFormIFrame-231492455133352&quot;);
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href &amp;&amp; window.location.href.indexOf(&quot;?&quot;) &gt; -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf(&quot;?&quot;) + 1).split(&#39;&amp;&#39;));
+      }
+      if (src &amp;&amp; src.indexOf(&quot;?&quot;) &gt; -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf(&quot;?&quot;) + 1).split(&quot;&amp;&quot;));
+        src = src.substr(0, src.indexOf(&quot;?&quot;))
+      }
+      iframeParams.push(&quot;isIframeEmbed=1&quot;);
+      ifr.src = src + &quot;?&quot; + iframeParams.join(&#39;&amp;&#39;);
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === &#39;object&#39;) { return; }
+      var args = e.data.split(&quot;:&quot;);
+      if (args.length &gt; 2) { iframe = document.getElementById(&quot;JotFormIFrame-&quot; + args[(args.length - 1)]); } else { iframe = document.getElementById(&quot;JotFormIFrame&quot;); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case &quot;scrollIntoView&quot;:
+          iframe.scrollIntoView();
+          break;
+        case &quot;setHeight&quot;:
+          iframe.style.height = args[1] + &quot;px&quot;;
+          if (!isNaN(args[1]) &amp;&amp; parseInt(iframe.style.minHeight) &gt; parseInt(args[1])) {
+            iframe.style.minHeight = args[1] + &quot;px&quot;;
+          }
+          break;
+        case &quot;collapseErrorPage&quot;:
+          if (iframe.clientHeight &gt; window.innerHeight) {
+            iframe.style.height = window.innerHeight + &quot;px&quot;;
+          }
+          break;
+        case &quot;reloadPage&quot;:
+          window.location.reload();
+          break;
+        case &quot;loadScript&quot;:
+          if( !window.isPermitted(e.origin, [&#39;jotform.com&#39;, &#39;jotform.pro&#39;]) ) { break; }
+          var src = args[1];
+          if (args.length &gt; 3) {
+              src = args[1] + &#39;:&#39; + args[2];
+          }
+          var script = document.createElement(&#39;script&#39;);
+          script.src = src;
+          script.type = &#39;text/javascript&#39;;
+          document.body.appendChild(script);
+          break;
+        case &quot;exitFullscreen&quot;:
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf(&quot;jotform&quot;) &gt; -1) ? true : false;
+      if(isJotForm &amp;&amp; &quot;contentWindow&quot; in iframe &amp;&amp; &quot;postMessage&quot; in iframe.contentWindow) {
+        var urls = {&quot;docurl&quot;:encodeURIComponent(document.URL),&quot;referrer&quot;:encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({&quot;type&quot;:&quot;urls&quot;,&quot;value&quot;:urls}), &quot;*&quot;);
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement(&#39;a&#39;);
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== &#39;undefined&#39; ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === &#39;.&#39;.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener(&quot;message&quot;, handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent(&quot;onmessage&quot;, handleIFrameMessage);
+    }
+    &lt;/script&gt;</tw-passagedata><tw-passagedata pid="70" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
+I ask one of the natives to take a portrait of him and he agrees. 
+
+When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
+
+I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again.
+
+Ne-ki-ga-huh:
+I see that the stranger asks one of my men to take a portrait of him and he agrees. 
+
+I feel that the respect that we&#39;ve given to him was betrayed and I start feeling angry as soos as I see that he was drawing the profile. 
+
+I think that the &quot;pale face&quot; has realized that he did something wrong by looking at our faces, so I explain that it&#39;s not allowed to take profile portraits in our culture. 
+He immediately erases the portrait and starts sketching a frontal one. 
+[[Continue -&gt; 2.5]]</tw-passagedata><tw-passagedata pid="71" name="2.04" tags="" position="1600,975" size="100,100">Capellini:
+I ask one of the natives to take a portrait of him and he agrees. 
+
+When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. 
+
+I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again. 
+
+Ne-ki-ga-huh:
+I see that the stranger asks one of my men to take a portrait of him and he agrees. 
+
+I feel that the respect that we&#39;ve given to him was betrayed when he starts drawing the face from a profile point of view. But I realize that, maybe, he doesn&#39;t know that it&#39;s not allowed to take profile portaits of our people. So I ask him if he can erase everything and draw a frontal portrait instead. 
+[[Continue -&gt; 2.05]]</tw-passagedata><tw-passagedata pid="72" name=" 2.05" tags="" position="1600,1100" size="100,100">Capellini: 
+I feel so happy about the portrait, so I decided to gift a telescope to the natives as a reward for their patience and respect.
+
+Ne-ki-ga-huh:
+The stranger shows us the finished portrait and it&#39;s really well done. 
+He decides to gift us an object that I&#39;ve never seen before as a reward of our patience and respect, he says. 
+
+[[Continue -&gt; 2.06]]</tw-passagedata><tw-passagedata pid="73" name=" 2.5" tags="" position="1425,1100" size="100,100">Capellini: 
+I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made.  
+
+Ne-ki-ga-huh:
+The stranger shows us the finished portrait and it&#39;s really well done. 
+He decides to gift us an object that I&#39;ve never seen before. 
+
+[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="74" name=" 2.06" tags="" position="1600,1225" size="100,100">Capellini:
+The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
+
+Ne-ki-ga-huh:
+The man explains to us that this object will allow us to see the sky, moon and stars. Every member of the tribe seems so excited and starts calling all the others to gather and try to use this object. 
+[[Continue -&gt;regalo1]]</tw-passagedata><tw-passagedata pid="75" name="regalo1" tags="" position="1600,1350" size="100,100">(set:$result to &quot;....&quot; )
+Ne-ki-ga-huh:
+We decide to reciprocate giving the stranger a gift. 
+
+Which one do I choose?
+(if: $m &gt; 0)[
+  (set: $result to &quot;Frog&quot;)
+] (else-if: $n &gt; 0)[
+  (set: $result to &quot;Mocassin&quot;)
+] (else:) [(link: &quot;Frog&quot;)[
+    (set: $m to it + 1)
+    (go-to: &quot;regalo1&quot;)]
+  (link: &quot;Mocassin&quot;)[
+    (set: $n to it + 1)
+    (go-to: &quot;regalo1&quot;)
+  ]]
+Capellini:
+The indians decide to give me a (print: $result).  What do I do?
+(if: $q is &gt; 0 or $r is &gt; 0) [] (else:) [(link: &quot;Accept &quot;)[\
+	(set: $q to it + 1)\
+	(go-to: &quot;regalo1&quot;)\
+]
+(link: &quot;Refuse&quot;)[\
+	(set: $r to it + 1)\
+	(go-to: &quot;regalo1&quot;)\]]
+(if: $m is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
+(if: $m is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
+(if: $n is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
+(if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]</tw-passagedata><tw-passagedata pid="76" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
+The indians are so surprised by my gift, I can perceive that actually they&#39;re not angry at me anymore. Almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
+
+Ne-ki-ga-huh:
+The man explains to us that this object will allow us to see the sky, moon and stars. The resentment that everyone felt before is replaced by excitement: I can hear people calling others to gather and try to use this object. 
+[[Continue -&gt;regalo]]</tw-passagedata><tw-passagedata pid="77" name="regalo" tags="" position="1425,1350" size="100,100">(set:$result to &quot;....&quot; )
+Ne-ki-ga-huh:
+We decide to reciprocate giving the stranger a gift. 
+
+Which one do I choose?
+(if: $i &gt; 0)[
+  (set: $result to &quot;Calumet&quot;)
+] (else-if: $l &gt; 0)[
+  (set: $result to &quot;Mocassin&quot;)
+] (else:) [(link: &quot;Calumet&quot;)[
+    (set: $i to it + 1)
+    (go-to: &quot;regalo&quot;)]
+  (link: &quot;Mocassin&quot;)[
+    (set: $l to it + 1)
+    (go-to: &quot;regalo&quot;)
+  ]]
+Capellini:
+The indians decide to give me a (print: $result).  What do I do?
+(if: $o is &gt; 0 or $p is &gt; 0) [] (else:) [(link: &quot;Accept &quot;)[\
+	(set: $o to it + 1)\
+	(go-to: &quot;regalo&quot;)\
+]
+(link: &quot;Refuse&quot;)[\
+	(set: $p to it + 1)\
+	(go-to: &quot;regalo&quot;)\]]
+(if: $i is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
+(if: $i is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
+(if: $l is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
+(if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]</tw-passagedata><tw-passagedata pid="78" name="Accept1" tags="" position="1525,1475" size="100,100">[[End]]</tw-passagedata><tw-passagedata pid="79" name="Refuse1" tags="" position="1400,1475" size="100,100">[[End]]</tw-passagedata><tw-passagedata pid="80" name="Accept2" tags="" position="1725,1350" size="100,100">[[End -&gt;end1]]
+</tw-passagedata><tw-passagedata pid="81" name="Refuse2" tags="" position="1725,1475" size="100,100">[[End -&gt;end1]]</tw-passagedata><tw-passagedata pid="82" name="End" tags="" position="1475,1600" size="100,100">Capellini:
+What do I do now?
+I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
+
+[[Dances]]
+[[Story]]
+
+Ne-ki-ga-huh:
+Riflessione 
+
+</tw-passagedata><tw-passagedata pid="83" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
+What do I do now?
+I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
+
+[[Dances -&gt;1.20]]
+[[Story -&gt;1.21]]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
