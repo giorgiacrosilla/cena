@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="C:\Users\crosi\Documents\GitHub\x\schede finali\verde1.css">
+    <title>Checkbox Form</title>
+    <script>
+        function validateForm(event) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var checked = false;
+
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    checked = true;
+                    break;
+                }
+            }
+
+            if (!checked) {
+                event.preventDefault();
+                alert('Please select at least one option.');
+            }
+        }
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the checkbox values for cultural interests
+            var culturalCheckboxes = document.querySelectorAll('input[name="cultural"]:checked');
+            var selectedCulturalInterests = Array.from(culturalCheckboxes).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            // Get the checkbox values for emotions
+            var emotionCheckboxes = document.querySelectorAll('input[name="emotion"]:checked');
+            var selectedEmotions = Array.from(emotionCheckboxes).map(function (checkbox) {
+                return checkbox.value;
+            });
+            var themeCheckboxes = document.querySelectorAll('input[name="theme"]:checked');
+            var selectedTheme = Array.from(themeCheckboxes).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            // Perform actions based on the selected interests and emotions
+            if (selectedCulturalInterests.includes("green") && (selectedEmotions.includes("surprise") || selectedEmotions.includes("hope")) && selectedTheme.includes("Relationship")) {
+                window.location.href = "verde1.html"; // Redirect to verde1.html for specific combination
+            }
+            else if (
+                selectedCulturalInterests.includes("green") &&
+                (selectedEmotions.includes("surprise") || selectedEmotions.includes("hope")) && 
+                (selectedTheme.includes("Political") || selectedTheme.includes("Immersion") || selectedTheme.includes("Curiosity"))
+            ) {
+                window.location.href = "verde2.html"; // Redirect to verde2.html for specific combination
+            }
+            else if (
+                selectedCulturalInterests.includes("green") &&
+                (selectedEmotions.includes("anger") || selectedEmotions.includes("resignation")) && 
+                (selectedTheme.includes("Political") || selectedTheme.includes("Immersion") || selectedTheme.includes("Curiosity"))
+            ) {
+                window.location.href = "verde4.html"; // Redirect to verde2.html for specific combination
+            }
+            else if (selectedCulturalInterests.includes("green") && (selectedEmotions.includes("anger") || selectedEmotions.includes("resignation")) && selectedTheme.includes("Relationship")) {
+                window.location.href = "verde3.html"; // Redirect to verde1.html for specific combination
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="maindiv">
+        <div class="content">
+            <form onsubmit="handleFormSubmit(event), validateForm(event)" id="myForm">
+                <h2>We need a few more information about the experience to build your personalized card.</h2>
+                <ol>
+                    <li> Which color better describes your experience?<br>
+                        <label><input type="checkbox" name="cultural" value="red">Red</label>
+                        <label><input type="checkbox" name="cultural" value="green">Green</label>
+                        <label><input type="checkbox" name="cultural" value="yellow">Yellow</label>
+                        <label><input type="checkbox" name="cultural" value="blue">Blue</label>
+                    </li>
+                    <li> Which is the emotion that you would associate with this experience?<br>
+                        <label><input type="checkbox" name="emotion" value="surprise">Surprise</label>
+                        <label><input type="checkbox" name="emotion" value="anger">Anger</label>
+                        <label><input type="checkbox" name="emotion" value="resignation">Resignation</label>
+                        <label><input type="checkbox" name="emotion" value="hope">Hope</label>
+                    </li>
+                    <li> Which was the most relevant theme of the story?<br>
+                        <label><input type="checkbox" name="theme" value="Curiosity">Curiosity</label>
+                        <label><input type="checkbox" name="theme" value="Relationship">Relationship
+                            between
+                            men-nature</label>
+                        <label><input type="checkbox" name="theme" value="Political">Political and
+                            social
+                            change</label>
+                        <label><input type="checkbox" name="theme" value="Immersion">Immersion in
+                            a
+                            different culture</label>
+                    </li>
+                    <li>Which of your travel experiences can be compared to this?<br>
+                        <textarea name="description" rows="10" cols="30"
+                            placeholder="Insert a brief personal description..." required>
+                    </textarea>
+                    </li>
+                    <li> Rate the experience:<br>
+                        <label><input type="checkbox" name="cultural" value="uno">1</label>
+                        <label><input type="checkbox" name="cultural" value="due">2</label>
+                        <label><input type="checkbox" name="cultural" value="tre">3</label>
+                        <label><input type="checkbox" name="cultural" value="quattro">4</label>
+                        <label><input type="checkbox" name="cultural" value="cinque">5</label>
+                    </li>
+                    <li> <label for="email">Enter your email:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </li>
+                </ol>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
