@@ -15,17 +15,38 @@ tw-story[tags="mappa"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/thumbnail_IMG_3099.jpg?raw=true');
   background-position:50% 50%;
   background-size:cover;
-  background-position: fixed;
+  background-position: relative;
   margin-left: auto;
 }
 
-tw-story[tags="mappa-indiano"] {
-  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/thumbnail_IMG_3100.jpg?raw=true');
+tw-story[tags="capellini"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/mirror_capellini.png?raw=true');
   background-position:50% 50%;
   background-size:cover;
-  background-position: fixed;
+  background-position: relative;
+  margin-left: auto;
 }
-
+tw-story[tags="indiano"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/mirror_bigdrum.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-story[tags="pipa"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/pipe.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-story[tags="rana"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/frog.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
 
 tw-story[tags="diario"] { 
   background-image: url('https://img.freepik.com/premium-photo/empty-old-vintage-page-paper-texture-background_51524-2659.jpg');
@@ -40,24 +61,32 @@ tw-passage {
   right:3%;
   top:5%;
   bottom:5%;
+  font-size: 18px;
+  overflow-y: auto;
 }
+
 tw-passage[tags="diario"] {
- color: black; 
+  color: black;
+  overflow-y:auto;
+}
+tw-story[tags="form"] {
+  background-color: white;
+  background-position:relative;
 }
 
 tw-passage[tags="form"] {
-  background-color: #E9E0D8;
-  position: fixed;
+  position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-  overflow: hidden;
+  overflow-y: auto;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
 [[1]]
 [[2]]
-</tw-passagedata><tw-passagedata pid="2" name="1" tags="" position="1000,275" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
+</tw-passagedata><tw-passagedata pid="2" name="1" tags="capellini" position="1000,275" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
 
 
 [[Continue -&gt;1.1]]</tw-passagedata><tw-passagedata pid="3" name="2" tags="" position="1300,150" size="100,100">Choose one of the two items: 
@@ -116,7 +145,7 @@ I try to respect their traditions and beliefs as much as possible and so I erase
 
 [[Continue -&gt; 1.6]]</tw-passagedata><tw-passagedata pid="13" name=" 1.6" tags="" position="1000,1275" size="100,100">The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
-[[Continue -&gt; 1.7]]</tw-passagedata><tw-passagedata pid="14" name=" 1.7" tags="" position="1000,1400" size="100,100">I notice a very strange frog that is jumping near the chieftain.
+[[Continue -&gt; 1.7]]</tw-passagedata><tw-passagedata pid="14" name=" 1.7" tags="rana" position="1000,1400" size="100,100">I notice a very strange frog that is jumping near the chieftain.
 I am very excited, so I ask the him what kind of frog it is. 
 He sees my reaction and decides to gift it to me because I have given them the telescope and I respected them. 
 He says that it&#39;s the most suited gift for me since I&#39;m very passionate for nature. 
@@ -126,7 +155,9 @@ What do I do?
 [[Refuse]]</tw-passagedata><tw-passagedata pid="15" name="Accept" tags="" position="1000,1525" size="100,100">I wander around the village a little bit more.
 I have the chance to visit some tents and eat some food. 
 
-[[Continue -&gt; 1.8]]</tw-passagedata><tw-passagedata pid="16" name="Refuse" tags="" position="1125,1525" size="100,100">I free the frog saying that it would be better if it lived in its natural background. 
+[[Continue -&gt; 1.8]]
+
+</tw-passagedata><tw-passagedata pid="16" name="Refuse" tags="" position="1125,1525" size="100,100">I free the frog saying that it would be better if it lived in its natural background. 
 
 I wander around the village a little bit more.
 I have the chance to visit some tents and eat some food. 
@@ -135,12 +166,12 @@ I have the chance to visit some tents and eat some food.
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
 [[Dances]]
-[[Story]]</tw-passagedata><tw-passagedata pid="18" name="Dances" tags="diario" position="1000,1775" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
+[[Story]]</tw-passagedata><tw-passagedata pid="18" name="Dances" tags="diario" position="1325,1850" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-6-2_23_50_32.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue]] </tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1125,1775" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+(link: &quot;click here&quot;)[(goto-url: &#39;https://giorgiacrosilla.github.io/cena-form/&#39;)]</tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1450,1850" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that have been killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -150,7 +181,7 @@ Before his death, Black Bird told some of his warriors where and how he wanted t
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue]]</tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
+(link: &quot;click here&quot;)[(goto-url: &#39;https://github.com/giorgiacrosilla/cena/blob/a2c008993a5cc78d6ab8b117bef1696789a260fb/index.html&#39;)]</tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
 
@@ -162,9 +193,9 @@ I try to respect their traditions and beliefs as much as possible and so I erase
 
 [[Continue -&gt; 1.16]]</tw-passagedata><tw-passagedata pid="22" name=" 1.16" tags="" position="1125,1275" size="100,100">The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
-[[Continue -&gt; 1.17]]</tw-passagedata><tw-passagedata pid="23" name=" 1.17" tags="" position="1125,1400" size="100,100">The chieftain orders a man to gift me his traditional pipe, called calumet.
+[[Continue -&gt; 1.17]]</tw-passagedata><tw-passagedata pid="23" name=" 1.17" tags="pipa" position="1125,1400" size="100,100">The chieftain orders a man to gift me his traditional pipe, called calumet.
 
-The native is very reluctant and start crying as soon as I got the pipe in my hands. 
+The native is very reluctant and starts crying as soon as I get the pipe in my hands. 
 At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. 
 
 What do I do now?
@@ -174,10 +205,10 @@ What do I do now?
 
 [[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="25" name="Refuse the gift" tags="" position="1250,1400" size="100,100">I do not accept the gift because I am sympathetic with him.
 
-[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="26" name="Diary" tags="" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
+[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="26" name="Diary" tags="capellini" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
 
 
-[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="Feather" tags="" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="Feather" tags="indiano" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
 
 
 [[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">Choose a language: 
@@ -216,12 +247,12 @@ I can decide to know a little bit more about the traditional dances or I can sit
 
 [[Dances -&gt;1.20]]
 [[Story -&gt;1.21]]
-</tw-passagedata><tw-passagedata pid="39" name="1.20" tags="diario" position="1250,1775" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
+</tw-passagedata><tw-passagedata pid="39" name="1.20" tags="diario" position="1575,1850" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-6-2_23_50_32.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue -&gt; Continue1]] </tw-passagedata><tw-passagedata pid="40" name="1.21" tags="diario" position="1375,1775" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+[[Continue -&gt; Continue1]] </tw-passagedata><tw-passagedata pid="40" name="1.21" tags="diario" position="1700,1850" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that were killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -349,103 +380,17 @@ I am an italian scientist, I have traveled through the &quot;great waters&quot; 
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
-[[Continue -&gt;2.4]]</tw-passagedata><tw-passagedata pid="68" name="children" tags="" position="1600,825" size="100,100">[[Continue -&gt;2.04]]</tw-passagedata><tw-passagedata pid="69" name="Continue" tags="form" position="1125,1900" size="100,100">
-    &lt;iframe
-      id=&quot;JotFormIFrame-231492455133352&quot;
-      title=&quot;Explorer&quot;
-      onload=&quot;window.parent.scrollTo(0,0)&quot;
-      allowtransparency=&quot;true&quot;
-      allowfullscreen=&quot;true&quot;
-      allow=&quot;geolocation; microphone; camera&quot;
-      src=&quot;https://form.jotform.com/231492455133352&quot;
-      frameborder=&quot;0&quot;
-      style=&quot;min-width:100%;max-width:100%;height:539px;border:none;&quot;
-      scrolling=&quot;no&quot;
-    &gt;
-    &lt;/iframe&gt;
-    &lt;script type=&quot;text/javascript&quot;&gt;
-    var ifr = document.getElementById(&quot;JotFormIFrame-231492455133352&quot;);
-    if (ifr) {
-      var src = ifr.src;
-      var iframeParams = [];
-      if (window.location.href &amp;&amp; window.location.href.indexOf(&quot;?&quot;) &gt; -1) {
-        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf(&quot;?&quot;) + 1).split(&#39;&amp;&#39;));
-      }
-      if (src &amp;&amp; src.indexOf(&quot;?&quot;) &gt; -1) {
-        iframeParams = iframeParams.concat(src.substr(src.indexOf(&quot;?&quot;) + 1).split(&quot;&amp;&quot;));
-        src = src.substr(0, src.indexOf(&quot;?&quot;))
-      }
-      iframeParams.push(&quot;isIframeEmbed=1&quot;);
-      ifr.src = src + &quot;?&quot; + iframeParams.join(&#39;&amp;&#39;);
-    }
-    window.handleIFrameMessage = function(e) {
-      if (typeof e.data === &#39;object&#39;) { return; }
-      var args = e.data.split(&quot;:&quot;);
-      if (args.length &gt; 2) { iframe = document.getElementById(&quot;JotFormIFrame-&quot; + args[(args.length - 1)]); } else { iframe = document.getElementById(&quot;JotFormIFrame&quot;); }
-      if (!iframe) { return; }
-      switch (args[0]) {
-        case &quot;scrollIntoView&quot;:
-          iframe.scrollIntoView();
-          break;
-        case &quot;setHeight&quot;:
-          iframe.style.height = args[1] + &quot;px&quot;;
-          if (!isNaN(args[1]) &amp;&amp; parseInt(iframe.style.minHeight) &gt; parseInt(args[1])) {
-            iframe.style.minHeight = args[1] + &quot;px&quot;;
-          }
-          break;
-        case &quot;collapseErrorPage&quot;:
-          if (iframe.clientHeight &gt; window.innerHeight) {
-            iframe.style.height = window.innerHeight + &quot;px&quot;;
-          }
-          break;
-        case &quot;reloadPage&quot;:
-          window.location.reload();
-          break;
-        case &quot;loadScript&quot;:
-          if( !window.isPermitted(e.origin, [&#39;jotform.com&#39;, &#39;jotform.pro&#39;]) ) { break; }
-          var src = args[1];
-          if (args.length &gt; 3) {
-              src = args[1] + &#39;:&#39; + args[2];
-          }
-          var script = document.createElement(&#39;script&#39;);
-          script.src = src;
-          script.type = &#39;text/javascript&#39;;
-          document.body.appendChild(script);
-          break;
-        case &quot;exitFullscreen&quot;:
-          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-          break;
-      }
-      var isJotForm = (e.origin.indexOf(&quot;jotform&quot;) &gt; -1) ? true : false;
-      if(isJotForm &amp;&amp; &quot;contentWindow&quot; in iframe &amp;&amp; &quot;postMessage&quot; in iframe.contentWindow) {
-        var urls = {&quot;docurl&quot;:encodeURIComponent(document.URL),&quot;referrer&quot;:encodeURIComponent(document.referrer)};
-        iframe.contentWindow.postMessage(JSON.stringify({&quot;type&quot;:&quot;urls&quot;,&quot;value&quot;:urls}), &quot;*&quot;);
-      }
-    };
-    window.isPermitted = function(originUrl, whitelisted_domains) {
-      var url = document.createElement(&#39;a&#39;);
-      url.href = originUrl;
-      var hostname = url.hostname;
-      var result = false;
-      if( typeof hostname !== &#39;undefined&#39; ) {
-        whitelisted_domains.forEach(function(element) {
-            if( hostname.slice((-1 * element.length - 1)) === &#39;.&#39;.concat(element) ||  hostname === element ) {
-                result = true;
-            }
-        });
-        return result;
-      }
-    };
-    if (window.addEventListener) {
-      window.addEventListener(&quot;message&quot;, handleIFrameMessage, false);
-    } else if (window.attachEvent) {
-      window.attachEvent(&quot;onmessage&quot;, handleIFrameMessage);
-    }
-    &lt;/script&gt;</tw-passagedata><tw-passagedata pid="70" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
+[[Continue -&gt;2.4]]</tw-passagedata><tw-passagedata pid="68" name="children" tags="" position="1600,825" size="100,100">Ne-ki-ga-huh:
+I explain that the children are separated from their parents and sent to the mission to learn english and the christian religion.
+
+Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
+In this way their community will disappear soon. 
+
+Capellini:
+I agree with what he said because I think that this minority and their culture needs to be preserved somehow. 
+
+I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
+[[Continue -&gt;2.04]]</tw-passagedata><tw-passagedata pid="69" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
 I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
@@ -459,7 +404,7 @@ I feel that the respect that we&#39;ve given to him was betrayed and I start fee
 
 I think that the &quot;pale face&quot; has realized that he did something wrong by looking at our faces, so I explain that it&#39;s not allowed to take profile portraits in our culture. 
 He immediately erases the portrait and starts sketching a frontal one. 
-[[Continue -&gt; 2.5]]</tw-passagedata><tw-passagedata pid="71" name="2.04" tags="" position="1600,975" size="100,100">Capellini:
+[[Continue -&gt; 2.5]]</tw-passagedata><tw-passagedata pid="70" name="2.04" tags="" position="1600,975" size="100,100">Capellini:
 I ask one of the natives to take a portrait of him and he agrees. 
 
 When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. 
@@ -470,26 +415,26 @@ Ne-ki-ga-huh:
 I see that the stranger asks one of my men to take a portrait of him and he agrees. 
 
 I feel that the respect that we&#39;ve given to him was betrayed when he starts drawing the face from a profile point of view. But I realize that, maybe, he doesn&#39;t know that it&#39;s not allowed to take profile portaits of our people. So I ask him if he can erase everything and draw a frontal portrait instead. 
-[[Continue -&gt; 2.05]]</tw-passagedata><tw-passagedata pid="72" name=" 2.05" tags="" position="1600,1100" size="100,100">Capellini: 
+[[Continue -&gt; 2.05]]</tw-passagedata><tw-passagedata pid="71" name=" 2.05" tags="" position="1600,1100" size="100,100">Capellini: 
 I feel so happy about the portrait, so I decided to gift a telescope to the natives as a reward for their patience and respect.
 
 Ne-ki-ga-huh:
 The stranger shows us the finished portrait and it&#39;s really well done. 
 He decides to gift us an object that I&#39;ve never seen before as a reward of our patience and respect, he says. 
 
-[[Continue -&gt; 2.06]]</tw-passagedata><tw-passagedata pid="73" name=" 2.5" tags="" position="1425,1100" size="100,100">Capellini: 
+[[Continue -&gt; 2.06]]</tw-passagedata><tw-passagedata pid="72" name=" 2.5" tags="" position="1425,1100" size="100,100">Capellini: 
 I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made.  
 
 Ne-ki-ga-huh:
 The stranger shows us the finished portrait and it&#39;s really well done. 
 He decides to gift us an object that I&#39;ve never seen before. 
 
-[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="74" name=" 2.06" tags="" position="1600,1225" size="100,100">Capellini:
+[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="73" name=" 2.06" tags="" position="1600,1225" size="100,100">Capellini:
 The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
 The man explains to us that this object will allow us to see the sky, moon and stars. Every member of the tribe seems so excited and starts calling all the others to gather and try to use this object. 
-[[Continue -&gt;regalo1]]</tw-passagedata><tw-passagedata pid="75" name="regalo1" tags="" position="1600,1350" size="100,100">(set:$result to &quot;....&quot; )
+[[Continue -&gt;regalo1]]</tw-passagedata><tw-passagedata pid="74" name="regalo1" tags="" position="1600,1350" size="100,100">(set:$result to &quot;....&quot; )
 Ne-ki-ga-huh:
 We decide to reciprocate giving the stranger a gift. 
 
@@ -517,12 +462,12 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $m is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
 (if: $m is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
 (if: $n is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
-(if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]</tw-passagedata><tw-passagedata pid="76" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
+(if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]</tw-passagedata><tw-passagedata pid="75" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
 The indians are so surprised by my gift, I can perceive that actually they&#39;re not angry at me anymore. Almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
 The man explains to us that this object will allow us to see the sky, moon and stars. The resentment that everyone felt before is replaced by excitement: I can hear people calling others to gather and try to use this object. 
-[[Continue -&gt;regalo]]</tw-passagedata><tw-passagedata pid="77" name="regalo" tags="" position="1425,1350" size="100,100">(set:$result to &quot;....&quot; )
+[[Continue -&gt;regalo]]</tw-passagedata><tw-passagedata pid="76" name="regalo" tags="" position="1425,1350" size="100,100">(set:$result to &quot;....&quot; )
 Ne-ki-ga-huh:
 We decide to reciprocate giving the stranger a gift. 
 
@@ -550,8 +495,26 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $i is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
 (if: $i is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
 (if: $l is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
-(if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]</tw-passagedata><tw-passagedata pid="78" name="Accept1" tags="" position="1525,1475" size="100,100">[[End]]</tw-passagedata><tw-passagedata pid="79" name="Refuse1" tags="" position="1400,1475" size="100,100">[[End]]</tw-passagedata><tw-passagedata pid="80" name="Accept2" tags="" position="1725,1350" size="100,100">[[End -&gt;end1]]
-</tw-passagedata><tw-passagedata pid="81" name="Refuse2" tags="" position="1725,1475" size="100,100">[[End -&gt;end1]]</tw-passagedata><tw-passagedata pid="82" name="End" tags="" position="1475,1600" size="100,100">Capellini:
+(if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]</tw-passagedata><tw-passagedata pid="77" name="Accept1" tags="" position="1525,1475" size="100,100">Capellini:
+The chieftain orders a man to give me his (print: $result).
+The native is very reluctant and starts crying as soon as I get the (print: $result) in my hands. 
+At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. 
+[[Continue-&gt;End]]</tw-passagedata><tw-passagedata pid="78" name="Refuse1" tags="" position="1400,1475" size="100,100">Capellini:
+I don&#39;t accept the gift because these people are living in extreme poverty. 
+If I accepted a gift, one of the indians had to give up one of their belongings. 
+[[Continue-&gt;End]]</tw-passagedata><tw-passagedata pid="79" name="Accept2" tags="" position="1725,1350" size="100,100">Capellini:
+I accept the (print: $result).
+I&#39;m very happy that I can bring home with me something that will remind of this moment.
+I wander around the village a little bit more.
+[[Continue -&gt;end1]]
+</tw-passagedata><tw-passagedata pid="80" name="Refuse2" tags="" position="1725,1475" size="100,100">(if: $result is &quot;mocassin&quot;)[Capellini:
+I don&#39;t accept the gift because these people are living in extreme poverty. 
+If I accepted a gift, one of the indians had to give up one of their belongings. ]
+(else:)
+[I free the frog saying that it would be better if it lived in its natural background. 
+
+I wander around the village a little bit more.]
+[[Continue -&gt;end1]]</tw-passagedata><tw-passagedata pid="81" name="End" tags="" position="1475,1600" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
@@ -561,13 +524,17 @@ I can decide to know a little bit more about the traditional dances or I can sit
 Ne-ki-ga-huh:
 Riflessione 
 
-</tw-passagedata><tw-passagedata pid="83" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
+[[Continue -&gt;indianend]]</tw-passagedata><tw-passagedata pid="82" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
 [[Dances -&gt;1.20]]
 [[Story -&gt;1.21]]
-</tw-passagedata><tw-passagedata pid="84" name=" Continue1" tags="" position="1300,1900" size="100,100"></tw-passagedata></tw-storydata>
+ Ne-ki-ga-huh:
+ riflessione
+ 
+ [[Continue-&gt;indianend]]</tw-passagedata><tw-passagedata pid="83" name=" Continue1" tags="form" position="1625,1975" size="100,100">
+</tw-passagedata><tw-passagedata pid="84" name="indianend" tags="" position="1625,1600" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
