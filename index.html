@@ -70,8 +70,9 @@ tw-passage[tags="diario"] {
   overflow-y:auto;
 }
 tw-story[tags="form"] {
-  background-color: white;
+  background-color: black;
   background-position:relative;
+  color: white;
 }
 
 tw-passage[tags="form"] {
@@ -82,8 +83,16 @@ tw-passage[tags="form"] {
   bottom: 0%;
   overflow-y: auto;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">if (typeof window.CustomScripts == "undefined") {
+	window.CustomScripts = {
+		updateVariable(inputName) {
+			// Get the value from the input textbox at time of click.
+			var value = $("input[name='" + inputName + "']")[0].value;
+			// Update the variable.
+			State.variables[inputName] = value;
+		}
+	};
+};</script><tw-passagedata pid="1" name="Users" tags="" position="1000,150" size="100,100">[How many users will be involved in this narrative?]
 [[1]]
 [[2]]
 </tw-passagedata><tw-passagedata pid="2" name="1" tags="capellini" position="1000,275" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
@@ -131,11 +140,13 @@ I agree with what he said because I think that this minority and their culture n
 
 I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
 
-[[Continue -&gt; 1.4]]</tw-passagedata><tw-passagedata pid="10" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
+[[Continue -&gt; 1.4]]
+(set:$capellini to &quot;children&quot;)</tw-passagedata><tw-passagedata pid="10" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">(set:$capellini to &quot;capellini&quot;)I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
-[[Continue -&gt;1.14]]</tw-passagedata><tw-passagedata pid="11" name=" 1.4" tags="" position="1000,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
+[[Continue -&gt;1.14]]
+</tw-passagedata><tw-passagedata pid="11" name=" 1.4" tags="" position="1000,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
 
 When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. 
 
@@ -165,13 +176,13 @@ I have the chance to visit some tents and eat some food.
 [[Continue -&gt; 1.8]]</tw-passagedata><tw-passagedata pid="17" name=" 1.8" tags="" position="1000,1650" size="100,100">What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
-[[Dances]]
-[[Story]]</tw-passagedata><tw-passagedata pid="18" name="Dances" tags="diario" position="1325,1850" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
+[[Dances-&gt;1.20]]
+[[Story-&gt;1.21]]</tw-passagedata><tw-passagedata pid="18" name="Dances" tags="diario" position="1325,1850" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-6-2_23_50_32.mp3&quot;&gt; &lt;/audio&gt;
-(link: &quot;click here&quot;)[(goto-url: &#39;https://giorgiacrosilla.github.io/cena-form/&#39;)]</tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1450,1850" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+[[Continue -&gt; Continue2]] </tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1450,1850" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that have been killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -181,7 +192,7 @@ Before his death, Black Bird told some of his warriors where and how he wanted t
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
-(link: &quot;click here&quot;)[(goto-url: &#39;https://github.com/giorgiacrosilla/cena/blob/a2c008993a5cc78d6ab8b117bef1696789a260fb/index.html&#39;)]</tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
+[[Continue -&gt; Continue2]] </tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
 
@@ -201,7 +212,8 @@ At first, I don&#39;t get why he had such a reaction, then the others tell me th
 What do I do now?
 
 [[Accept the gift]]
-[[Refuse the gift]]</tw-passagedata><tw-passagedata pid="24" name="Accept the gift" tags="" position="1250,1525" size="100,100">I wander around the village a little bit more.
+[[Refuse the gift]]
+(set:$result to &quot;Calumet&quot;)</tw-passagedata><tw-passagedata pid="24" name="Accept the gift" tags="" position="1250,1525" size="100,100">I wander around the village a little bit more.
 
 [[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="25" name="Refuse the gift" tags="" position="1250,1400" size="100,100">I do not accept the gift because I am sympathetic with him.
 
@@ -211,10 +223,18 @@ What do I do now?
 [[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="Feather" tags="indiano" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
 
 
-[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">Choose a language: 
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">(set: $linkA to false)
+
+(link: &quot;Start&quot;)[{[
+		(show: ?extra)
+	]
+}]
+
+|extra)[Choose a language: 
 
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png&quot; width=&quot;50px&quot;&gt;-&gt;Users]]
-[[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1024px-Flag_of_Italy.svg.png&quot; width=&quot;50&quot;&gt;-&gt;Utenti]]</tw-passagedata><tw-passagedata pid="29" name="Utenti" tags="" position="500,150" size="100,100">Quanti utenti sono coinvolti?
+[[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1024px-Flag_of_Italy.svg.png&quot; width=&quot;50&quot;&gt;-&gt;Utenti]]]
+</tw-passagedata><tw-passagedata pid="29" name="Utenti" tags="" position="500,150" size="100,100">Quanti utenti sono coinvolti?
 
 [[1 -&gt;1.01]]
 [[2-&gt; 2.01]]</tw-passagedata><tw-passagedata pid="30" name="1.01" tags="" position="500,275" size="100,100">Uno specchio riflette la mia immagine: ho le vesti di Giovanni Capellini
@@ -245,8 +265,8 @@ Cosa faccio?
 </tw-passagedata><tw-passagedata pid="38" name="1.19" tags="" position="1275,1650" size="100,100">What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
-[[Dances -&gt;1.20]]
-[[Story -&gt;1.21]]
+[[Dances]]
+[[Story]]
 </tw-passagedata><tw-passagedata pid="39" name="1.20" tags="diario" position="1575,1850" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
@@ -262,7 +282,7 @@ Before his death, Black Bird told some of his warriors where and how he wanted t
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue -&gt; Continue1]]</tw-passagedata><tw-passagedata pid="41" name=" 1.04" tags="" position="500,775" size="100,100">[[Voglio saperne di più sui bambini del villaggio]]
+[[Continue -&gt; Continue1]] </tw-passagedata><tw-passagedata pid="41" name=" 1.04" tags="" position="500,775" size="100,100">[[Voglio saperne di più sui bambini del villaggio]]
 [[Racconto di più su chi sono]]</tw-passagedata><tw-passagedata pid="42" name="Voglio saperne di più sui bambini del villaggio" tags="" position="500,900" size="100,100">Il capo villaggio mi spiega che i bambini vengono separati dai loro genitori e mandati alla missione cattolica per occidentalizzarsi e imparare l&#39;inglese.
 
 Ogni volta che tornano a casa non riconoscono più il modo di vivere dei loro genitori, rifiutano le tradizioni e sperano di poter lasciare definitivamente il villaggio in futuro.
@@ -380,7 +400,8 @@ I am an italian scientist, I have traveled through the &quot;great waters&quot; 
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
-[[Continue -&gt;2.4]]</tw-passagedata><tw-passagedata pid="68" name="children" tags="" position="1600,825" size="100,100">Ne-ki-ga-huh:
+[[Continue -&gt;2.4]]
+(set:$capellini to &quot;capellini&quot;)</tw-passagedata><tw-passagedata pid="68" name="children" tags="" position="1600,825" size="100,100">Ne-ki-ga-huh:
 I explain that the children are separated from their parents and sent to the mission to learn english and the christian religion.
 
 Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
@@ -390,7 +411,8 @@ Capellini:
 I agree with what he said because I think that this minority and their culture needs to be preserved somehow. 
 
 I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
-[[Continue -&gt;2.04]]</tw-passagedata><tw-passagedata pid="69" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
+[[Continue -&gt;2.04]]
+(set:$capellini to &quot;children&quot;)</tw-passagedata><tw-passagedata pid="69" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
 I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
@@ -533,8 +555,87 @@ I can decide to know a little bit more about the traditional dances or I can sit
  Ne-ki-ga-huh:
  riflessione
  
- [[Continue-&gt;indianend]]</tw-passagedata><tw-passagedata pid="83" name=" Continue1" tags="form" position="1625,1975" size="100,100">
-</tw-passagedata><tw-passagedata pid="84" name="indianend" tags="" position="1625,1600" size="100,100"></tw-passagedata></tw-storydata>
+ [[Continue-&gt;indianend]]</tw-passagedata><tw-passagedata pid="83" name=" Continue1" tags="form" position="1625,2000" size="100,100">
+Which color better describes your experience?
+(checkbox: bind $green, &quot;green&quot;) 
+(checkbox: bind $red, &quot;yellow&quot;) 
+(checkbox: bind $yellow, &quot;red&quot;) 
+(checkbox: bind $blue, &quot;blue&quot;) 
+
+
+Which color better describes your experience?
+(checkbox: bind $surprise, &quot;surprise&quot;) 
+(checkbox: bind $resentment, &quot;resentment&quot;) 
+(checkbox: bind $hope, &quot;hope&quot;) 
+(checkbox: bind $anger, &quot;anger&quot;) 
+
+Which was the most relevant theme of the story?
+(checkbox: bind $curiosity, &quot;Curiosity&quot;) 
+(checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
+(checkbox: bind $political, &quot;Political and social change&quot;) 
+(checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
+
+Which of your travel experiences can be compared to this?
+(input-box: bind $code, &quot;XXX=&quot;)
+[[Continue]]</tw-passagedata><tw-passagedata pid="84" name="indianend" tags="" position="1625,1600" size="100,100">Which color better describes your experience?
+(checkbox: bind $green, &quot;green&quot;) 
+(checkbox: bind $red, &quot;yellow&quot;) 
+(checkbox: bind $yellow, &quot;red&quot;) 
+(checkbox: bind $blue, &quot;blue&quot;) 
+
+
+Which color better describes your experience?
+(checkbox: bind $surprise, &quot;surprise&quot;) 
+(checkbox: bind $resentment, &quot;resentment&quot;) 
+(checkbox: bind $hope, &quot;hope&quot;) 
+(checkbox: bind $anger, &quot;anger&quot;) 
+
+Which was the most relevant theme of the story?
+(checkbox: bind $curiosity, &quot;Curiosity&quot;) 
+(checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
+(checkbox: bind $political, &quot;Political and social change&quot;) 
+(checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
+
+What other encounter in your life did this experience bring to mind?
+(input-box: bind $code, &quot;XXX=&quot;)
+</tw-passagedata><tw-passagedata pid="85" name="Continue" tags="form" position="1625,2125" size="100,100">(if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $resentment is true or $anger is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $anger is true or $resentment is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $resentment is true or $anger is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $anger is true or $resentment is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+</tw-passagedata><tw-passagedata pid="86" name=" Continue2" tags="form" position="1375,2000" size="100,100">
+Which color better describes your experience?
+(checkbox: bind $green, &quot;green&quot;) 
+(checkbox: bind $red, &quot;yellow&quot;) 
+(checkbox: bind $yellow, &quot;red&quot;) 
+(checkbox: bind $blue, &quot;blue&quot;) 
+
+
+Which color better describes your experience?
+(checkbox: bind $surprise, &quot;surprise&quot;) 
+(checkbox: bind $resentment, &quot;resentment&quot;) 
+(checkbox: bind $hope, &quot;hope&quot;) 
+(checkbox: bind $anger, &quot;anger&quot;) 
+
+Which was the most relevant theme of the story?
+(checkbox: bind $curiosity, &quot;Curiosity&quot;) 
+(checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
+(checkbox: bind $political, &quot;Political and social change&quot;) 
+(checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
+
+Which of your travel experiences can be compared to this?
+(input-box: bind $code, &quot;XXX=&quot;)
+[[Continue-&gt;continue3]]</tw-passagedata><tw-passagedata pid="87" name="continue3" tags="form" position="1375,2125" size="100,100">(if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $resentment is true or $anger is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $green is true and $anger is true or $resentment is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $resentment is true or $anger is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
+(else-if:$result is &quot;calumet&quot; and $red is true and $anger is true or $resentment is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
