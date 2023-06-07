@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play CENA.</tw-noscript></noscript></tw-story>
-<tw-storydata name="CENA" startnode="28" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="81BE0AE5-07E1-4622-9F0F-C778087AAB25" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+<tw-storydata name="CENA" startnode="27" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="81BE0AE5-07E1-4622-9F0F-C778087AAB25" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 tw-story[tags="mappa"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/thumbnail_IMG_3099.jpg?raw=true');
@@ -47,7 +47,37 @@ tw-story[tags="rana"] {
   background-position: relative;
   margin-left: auto;
 }
-
+.health-3 {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/frog.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+.health-2 {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/mocassin.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+.health-1 {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/pipe.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+.health-4 {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/mocassin.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-include[type="startup"], tw-include[title="Health Based Styling"] {
+	display: none;
+}
 tw-story[tags="diario"] { 
   background-image: url('https://img.freepik.com/premium-photo/empty-old-vintage-page-paper-texture-background_51524-2659.jpg');
   background-position: 0% 0%;
@@ -62,14 +92,22 @@ tw-passage {
   top:5%;
   bottom:5%;
   font-size: 18px;
+}
+.box-container {
+  position:absolute;
+  left: 0%;
+  right:0%;
+  top:0%;
+  bottom:0%;
+  font-size: 18px;
   overflow:auto;
 }
 
 tw-passage[tags="diario"] {
   color: black;
-  overflow-y:auto;
 }
 tw-story[tags="form"] {
+  background-image: none;
   background-color: #8fbc8f;
   background-position:relative;
   color: white;
@@ -90,6 +128,7 @@ tw-passage[tags="form"] {
   padding-bottom: 10px;
   padding-left: 30px;
 }
+
 tw-passage[tags="form"] h1{
     text-align: center;
     font-weight: bold;
@@ -100,7 +139,8 @@ tw-passage[tags="form"] h1{
     text-align: center;
 }
 tw-passage[tags="form"] p{
-    text-align: justify;
+  text-align: justify;
+  margin-left: 8px;
 }
 .red tw-link{
     padding: 15px;
@@ -114,6 +154,7 @@ tw-passage[tags="form"] p{
     border-radius: 30px;
 }
 tw-story[tags="card"] {
+  background-image:none;
   background-color: #8fbc8f;
   background-position:relative;
 }
@@ -128,10 +169,16 @@ tw-passage[tags="card"] {
   color:black;
   width: 70%;
   border-radius: 15px;
-  padding-top:10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 30px;
+
+}
+.box-container {
+  position:absolute;
+  left: 0%;
+  right:0%;
+  top:0%;
+  bottom:0%;
+  font-size: 18px;
+  overflow:auto;
 }
 tw-passage[tags="card"] h1{
     text-align: center;
@@ -142,9 +189,31 @@ tw-passage[tags="card"] h1{
 .sketchfab-embed-wrapper{
     text-align: center;
 }
+tw-passage[tags="card"] p{
+   margin-left: 8px;
+}
+/* width */
+::-webkit-scrollbar {
+  background:transparent;
+  width: 20px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">if (typeof window.CustomScripts == "undefined") {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:#c8c8c8; 
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">if (typeof window.CustomScripts == "undefined") {
 	window.CustomScripts = {
 		updateVariable(inputName) {
 			// Get the value from the input textbox at time of click.
@@ -175,13 +244,7 @@ tw-passage[tags="card"] h1{
 
 
 (live: 7s)[(transition-arrive:&quot;dissolve&quot;)[[I go there and talk to him]](stop:)]
-(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[[ I explore a little bit more the village]](stop:)]</tw-passagedata><tw-passagedata pid="6" name="I go there and talk to him" tags="" position="1000,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I enter the tent and we immediately exchange a respectful greeting. Then, we sit in front of each other.](stop:)]
-
-(live: 2s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
-
-(live: 5s)[(t8n:&quot;dissolve&quot;)[He answers that his name is Ne-hi-ga-kuh and he&#39;s the chieftain of the Ponkas tribe. His tribe is temporarily allied with the Omahas and so they have been invited to stay at Black Bird because they did not want to fight in the war and their harvest was rotten.](stop:)]
-
-(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.3]](stop:)]</tw-passagedata><tw-passagedata pid="7" name=" I explore a little bit more the village" tags="" position="850,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I immediately see something that captures my attention: some indigenous children, dressed like europeans, are coming back home escorted by soldiers.](stop:)] 
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[[ I explore a little bit more the village]](stop:)]</tw-passagedata><tw-passagedata pid="6" name=" I explore a little bit more the village" tags="" position="850,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I immediately see something that captures my attention: some indigenous children, dressed like europeans, are coming back home escorted by soldiers.](stop:)] 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[Their mothers are waiting for them.](stop:)] 
 (live: 4s)[(t8n:&quot;dissolve&quot;)[One of the children sees me and gives me a weird look. ](stop:)] 
 (live: 6s)[(t8n:&quot;dissolve&quot;)[He has recognized me as a stranger. ](stop:)] 
@@ -189,62 +252,65 @@ tw-passage[tags="card"] h1{
 (live: 10s)[(t8n:&quot;dissolve&quot;)[I am astonished to hear a child speak english so well. ](stop:)] 
 (live: 12s)[(t8n:&quot;dissolve&quot;)[The child sees my reaction and thinks that I am there to talk to the chieftain so he takes me to the chieftain&#39;s tent. ](stop:)] 
 
-(live: 13s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt;I go there and talk to him]] (stop:)]</tw-passagedata><tw-passagedata pid="8" name=" 1.3" tags="" position="1000,775" size="100,100">What do I do now?
+(live: 13s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt;I go there and talk to him]] (stop:)]</tw-passagedata><tw-passagedata pid="7" name=" 1.3" tags="" position="1000,775" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?](stop:)]
 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Do I want to know more about the children of the village?]]
-[[Do I want to tell the chieftain who I am and why I am there?]]</tw-passagedata><tw-passagedata pid="9" name="Do I want to know more about the children of the village?" tags="" position="1000,900" size="100,100">The chieftain explains that the children are separated from their parents and sent to the mission to learn english and the christian religion.
+[[Do I want to tell the chieftain who I am and why I am there?]]](stop:)] 
+</tw-passagedata><tw-passagedata pid="8" name="Do I want to know more about the children of the village?" tags="" position="1000,900" size="100,100">(set:$capellini to &quot;children&quot;)
+(live: 0s)[(t8n:&quot;dissolve&quot;)[The chieftain explains that the children are separated from their parents and sent to the mission to learn english and the christian religion.](stop:)]
 
-Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
-In this way their community will disappear soon. 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
+In this way their community will disappear soon. ](stop:)] 
 
-I agree with what he said because I think that this minority and their culture needs to be preserved somehow. 
+(live: 5s)[(t8n:&quot;dissolve&quot;)[I agree with what he said because I think that this minority and their culture needs to be preserved somehow. ](stop:)]
 
-I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
 
-[[Continue -&gt; 1.4]]
-(set:$capellini to &quot;children&quot;)</tw-passagedata><tw-passagedata pid="10" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">(set:$capellini to &quot;capellini&quot;)I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
+[[Continue -&gt; 1.4]](stop:)]</tw-passagedata><tw-passagedata pid="9" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">(set:$capellini to &quot;capellini&quot;)
+(live: 0s)[(t8n:&quot;dissolve&quot;)[I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
-I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
+I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. ](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[ I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. ](stop:)]
 
-[[Continue -&gt;1.14]]
-</tw-passagedata><tw-passagedata pid="11" name=" 1.4" tags="" position="1000,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
+(live: 5s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt;1.14]]](stop:)] 
+</tw-passagedata><tw-passagedata pid="10" name=" 1.4" tags="" position="1000,1025" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I ask one of the natives to take a portrait of him and he agrees. ](stop:)]
 
-When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. ](stop:)] 
 
-I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again. 
+(live: 5s)[(t8n:&quot;dissolve&quot;)[I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again.](stop:)]
 
-[[Continue -&gt; 1.5]]</tw-passagedata><tw-passagedata pid="12" name=" 1.5" tags="" position="1000,1150" size="100,100">I feel so happy about the portrait, so I decided to gift a telescope to the natives as a reward for their patience and respect.
+(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.5]](stop:)]</tw-passagedata><tw-passagedata pid="11" name=" 1.5" tags="" position="1000,1150" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I feel so happy about the portrait, so I decided to gift a telescope to the natives as a reward for their patience and respect.](stop:)]
 
-[[Continue -&gt; 1.6]]</tw-passagedata><tw-passagedata pid="13" name=" 1.6" tags="" position="1000,1275" size="100,100">The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.6]]](stop:)] 
 
-[[Continue -&gt; 1.7]]</tw-passagedata><tw-passagedata pid="14" name=" 1.7" tags="rana" position="1000,1400" size="100,100">I notice a very strange frog that is jumping near the chieftain.
-I am very excited, so I ask the him what kind of frog it is. 
-He sees my reaction and decides to gift it to me because I have given them the telescope and I respected them. 
-He says that it&#39;s the most suited gift for me since I&#39;m very passionate for nature. 
+</tw-passagedata><tw-passagedata pid="12" name=" 1.6" tags="" position="1000,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
 
-What do I do?
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.7]]](stop:)] </tw-passagedata><tw-passagedata pid="13" name=" 1.7" tags="rana" position="1000,1400" size="100,100">(set:$result to &quot;Frog&quot;)
+(live: 0s)[(t8n:&quot;dissolve&quot;)[I notice a very strange frog that is jumping near the chieftain.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I am very excited, so I ask the him what kind of frog it is.](stop:)] 
+(live: 5s)[(t8n:&quot;dissolve&quot;)[He sees my reaction and decides to gift it to me because I have given them the telescope and I respected them.](stop:)]
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[He says that it&#39;s the most suited gift for me since I&#39;m very passionate for nature.](stop:)]
+(live: 8s)[(transition-arrive:&quot;dissolve&quot;)[What do I do?
 [[Accept]]
-[[Refuse]]
-(set:$result to &quot;Frog&quot;)</tw-passagedata><tw-passagedata pid="15" name="Accept" tags="" position="1000,1525" size="100,100">I wander around the village a little bit more.
-I have the chance to visit some tents and eat some food. 
-
-[[Continue -&gt; 1.8]]
-
-</tw-passagedata><tw-passagedata pid="16" name="Refuse" tags="" position="1125,1525" size="100,100">I free the frog saying that it would be better if it lived in its natural background. 
-
-I wander around the village a little bit more.
-I have the chance to visit some tents and eat some food. 
-
-[[Continue -&gt; 1.8]]</tw-passagedata><tw-passagedata pid="17" name=" 1.8" tags="" position="1000,1650" size="100,100">What do I do now?
-I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
-
+[[Refuse]]](stop:)]
+</tw-passagedata><tw-passagedata pid="14" name="Accept" tags="" position="1000,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.
+I have the chance to visit some tents and eat some food. ](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.8]]](stop:)] 
+</tw-passagedata><tw-passagedata pid="15" name="Refuse" tags="" position="1125,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I free the frog saying that it would be better if it lived in its natural background.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.
+I have the chance to visit some tents and eat some food.](stop:)] 
+(live: 4s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.8]]](stop:)] </tw-passagedata><tw-passagedata pid="16" name=" 1.8" tags="" position="1000,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
+I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Dances]]
-[[Story]]</tw-passagedata><tw-passagedata pid="18" name="Dances" tags="diario" position="1375,1900" size="100,100">The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
+[[Story]]](stop:)] </tw-passagedata><tw-passagedata pid="17" name="Dances" tags="diario" position="1375,1900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;The 1st of October there should have been the pipe dance, a ceremony used to confirm friendly relationships between tribes; and in this context it was considered as a ratification of peace and friendship between the Omahas and the Ponkas sealed since Black Bird was still alive. 
 That day, the rain and intense cold did not allow the Indian dance to take place, this dance is done by semi-naked people that jump in the strangest ways and the grimaces, bizarre transformations and ridiculous attitudes help create a beautiful celebration; that ceremony was postponed, and so I was not able to attend it. 
 
 Apart from the pipe dance that is performed while having a calumet in one hand and smoking a k’nick k&#39;neck, the natives do a lot of other ceremonial dances that are descripted and pictured by Catlin, and I would like to talk briefly about them. There’s a dance called poor dance, there’s another called slaves dance, there’s also one that is done to celebrate dogs; the war dance precedes the departure for the battlefield, the snowshoes dance is done when the first snow covers the prairies, there are special dances that are used to celebrate the sun, the hunting, the corn, and the scalp. The corn dance is done as soon as the corn ripens: a small quantity of it is boiled and given to the Big Spirit as a sacrifice, the rest of the harvest is kept for the celebration. The natives are insatiable and there’s no limit in the quantity of corn that can be eaten in that circumstance: for this reason, the celebration can often last for more than a day and since the quantity of harvested corn is not abundant, almost all of it is eaten to celebrate the beginning of maturation. The scalp dance exists only in the wildest tribes that still continue to adorn themselves with the enemies’ scalps. 
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-6-2_23_50_32.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue -&gt; Continue2]] </tw-passagedata><tw-passagedata pid="19" name="Story" tags="diario" position="1500,1900" size="100,100">Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
+[[Continue -&gt; Continue2]] 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Story" tags="diario" position="1500,1900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Black Bird, or Vash-ing-guh-sah-ba in Omahas’ language, is considered by some writers as a personification of barbarity and natives’ slyness. It has been passed on that Black Bird discovered the infamous properties of arsenic thanks to a leather merchant that gave him a small quantity of it;  Black Bird fooled everyone making them believe that he had supernatural powers, like predicting the death of those who disputed his authority, where, in reality, he secretly gave them this drug. 
 Black Bird’s tribe became famous thanks to his power and lots of victories in the battlefield, for this reason every time someone dared to insult one of them, Black Bird would avenge him. 
 Black Bird was kept as prisoner by the Sioux at the beginning of his career as Omahas’ chieftain, then he became one of their worst nightmares. Someday, while he was chasing some enemies, he frequently fired shots to the fugitives’ footprints reassuring his soldiers that they would have reached and killed them before dark; he became famous as soon as he managed to do that. 
 Black Bird had a proud soul but also a sensible heart. He swore he would kill all the Ponkas because of their raids in Omahas territories. Right before their defeat, they sent peace heralds that have been killed as soon as they arrived to the Omahas border. The Ponkas were desperate, so their chieftain thought to send his daughter to Black Bird. She gave him a peace pipe and she made him fall in love with her because she was very young and attractive; the two tribes became allies from then on, as I have had the opportunity to see. 
@@ -254,38 +320,33 @@ Before his death, Black Bird told some of his warriors where and how he wanted t
 He was carried on the biggest “bluff” and then he was put on his favorite white horse that was buried alive with him. All the members of the tribe and the tribe’s agent were present while Black Bird was buried with a bow, shield, arrows, a pipe, a medicine-bag, a bag full of tobacco, a lighter, and some dried meat that could be useful for his journey to “the regions where his ancestors’ shadows hunt”. Eagles’ feathers decorated his head, and some scalps were hanging from the horse’s bridle.
 After the medicine-men finished the ceremonies, each warrior painted his hand red and left a handprint on the sacred horse’s mantle, they covered both the horse and the man with soil.  
 &lt;audio controls autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/ttsMP3.com_VoiceText_2023-5-31_21_13_13.mp3&quot;&gt; &lt;/audio&gt;
-[[Continue -&gt; Continue2]] </tw-passagedata><tw-passagedata pid="20" name="1.14" tags="" position="1125,1025" size="100,100">I ask one of the natives to take a portrait of him and he agrees. 
+[[Continue -&gt; Continue2]] 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="1.14" tags="" position="1125,1025" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I ask one of the natives to take a portrait of him and he agrees. ](stop:)]
 
-When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. ](stop:)] 
 
-I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again.
+(live: 5s)[(t8n:&quot;dissolve&quot;)[I try to respect their traditions and beliefs as much as possible and so I erase everything that I sketched and I start my drawing again.](stop:)]
 
-[[Continue -&gt; 1.15]]
+(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.15]](stop:)]</tw-passagedata><tw-passagedata pid="20" name=" 1.15" tags="" position="1125,1150" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made. ](stop:)]
 
-</tw-passagedata><tw-passagedata pid="21" name=" 1.15" tags="" position="1125,1150" size="100,100">I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made. 
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.16]]](stop:)] </tw-passagedata><tw-passagedata pid="21" name=" 1.16" tags="" position="1125,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
 
-[[Continue -&gt; 1.16]]</tw-passagedata><tw-passagedata pid="22" name=" 1.16" tags="" position="1125,1275" size="100,100">The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
-
-[[Continue -&gt; 1.17]]</tw-passagedata><tw-passagedata pid="23" name=" 1.17" tags="pipa" position="1125,1400" size="100,100">The chieftain orders a man to gift me his traditional pipe, called calumet.
-
-The native is very reluctant and starts crying as soon as I get the pipe in my hands. 
-At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. 
-
-What do I do now?
-
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.17]]](stop:)] </tw-passagedata><tw-passagedata pid="22" name=" 1.17" tags="pipa" position="1125,1400" size="100,100">(set:$result to &quot;Calumet&quot;)
+(live: 0s)[(t8n:&quot;dissolve&quot;)[The chieftain orders a man to gift me his traditional pipe, called calumet.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[The native is very reluctant and starts crying as soon as I get the pipe in my hands. 
+At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. ](stop:)] 
+(live: 5s)[(t8n:&quot;dissolve&quot;)[What do I do now?
 [[Accept the gift]]
-[[Refuse the gift]]
-(set:$result to &quot;Calumet&quot;)</tw-passagedata><tw-passagedata pid="24" name="Accept the gift" tags="" position="1250,1525" size="100,100">I wander around the village a little bit more.
-
-[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="25" name="Refuse the gift" tags="" position="1250,1400" size="100,100">I do not accept the gift because I am sympathetic with him.
-
-[[Continue -&gt;1.19]]</tw-passagedata><tw-passagedata pid="26" name="Diary" tags="capellini" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
+[[Refuse the gift]]](stop:)]</tw-passagedata><tw-passagedata pid="23" name="Accept the gift" tags="" position="1250,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt;1.19]]](stop:)] </tw-passagedata><tw-passagedata pid="24" name="Refuse the gift" tags="" position="1250,1400" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I do not accept the gift because I am sympathetic with him.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt;1.19]]](stop:)] 
+</tw-passagedata><tw-passagedata pid="25" name="Diary" tags="capellini" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
 
 
-[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="Feather" tags="indiano" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="26" name="Feather" tags="indiano" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
 
 
-[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="28" name="start" tags="" position="750,150" size="100,100">(set: $linkA to false)
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="start" tags="" position="750,150" size="100,100">(set: $linkA to false)
 
 (link: &quot;Start&quot;)[{[
 		(show: ?extra)
@@ -296,20 +357,20 @@ What do I do now?
 
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png&quot; width=&quot;50px&quot;&gt;-&gt;Users]]
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1024px-Flag_of_Italy.svg.png&quot; width=&quot;50&quot;&gt;-&gt;Utenti]]]
-</tw-passagedata><tw-passagedata pid="29" name="Utenti" tags="" position="500,150" size="100,100">Quanti utenti sono coinvolti?
+</tw-passagedata><tw-passagedata pid="28" name="Utenti" tags="" position="500,150" size="100,100">Quanti utenti sono coinvolti?
 
 [[1 -&gt;1.01]]
-[[2-&gt; 2.01]]</tw-passagedata><tw-passagedata pid="30" name="1.01" tags="" position="500,275" size="100,100">Uno specchio riflette la mia immagine: ho le vesti di Giovanni Capellini
+[[2-&gt; 2.01]]</tw-passagedata><tw-passagedata pid="29" name="1.01" tags="" position="500,275" size="100,100">Uno specchio riflette la mia immagine: ho le vesti di Giovanni Capellini
 
 
-[[Continua -&gt;1.02]]</tw-passagedata><tw-passagedata pid="31" name=" 2.01" tags="" position="375,275" size="100,100">Choose one of the two items: 
+[[Continua -&gt;1.02]]</tw-passagedata><tw-passagedata pid="30" name=" 2.01" tags="" position="375,275" size="100,100">Choose one of the two items: 
 
 [[&lt;img src=&quot;Open-book-isolated-on-transparent-background-PNG.png&quot; width=&quot;70px&quot;&gt;-&gt;Diario]]
-[[&lt;img src=&quot;1467267.png&quot; width=&quot;70px&quot;&gt;-&gt;Piuma]]</tw-passagedata><tw-passagedata pid="32" name="Diario" tags="" position="250,150" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="Piuma" tags="" position="250,275" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="1.02" tags="mappa" position="500,400" size="100,100">Mi trovo nel bel mezzo del mio viaggio in Nord America per studiare fossili e rocce. 
+[[&lt;img src=&quot;1467267.png&quot; width=&quot;70px&quot;&gt;-&gt;Piuma]]</tw-passagedata><tw-passagedata pid="31" name="Diario" tags="" position="250,150" size="100,100"></tw-passagedata><tw-passagedata pid="32" name="Piuma" tags="" position="250,275" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="1.02" tags="mappa" position="500,400" size="100,100">Mi trovo nel bel mezzo del mio viaggio in Nord America per studiare fossili e rocce. 
 Ho deciso di deviare dal percorso prestabilito per visitare il villaggio di Black Bird in Nebraska.
 è il 30 settembre 1863...
 
-[[Continua -&gt;1.03]]</tw-passagedata><tw-passagedata pid="35" name="1.03" tags="" position="500,525" size="100,100">Raggiungo il villaggio assieme ad un interprete e dò una prima occhiata intorno. 
+[[Continua -&gt;1.03]]</tw-passagedata><tw-passagedata pid="34" name="1.03" tags="" position="500,525" size="100,100">Raggiungo il villaggio assieme ad un interprete e dò una prima occhiata intorno. 
 Sono circondato da tende e cavalli. Vedo i nativi vestiti in modo tradizionale. 
 
 C&#39;è un uomo fuori dalla tenda più grande e intuisco che possa essere il capo villaggio.
@@ -317,33 +378,32 @@ C&#39;è un uomo fuori dalla tenda più grande e intuisco che possa essere il ca
 Cosa faccio?
 
 [[Vado direttamente da lui]]
-[[Mi guardo ancora un po&#39; intorno]]</tw-passagedata><tw-passagedata pid="36" name="Mi guardo ancora un po&#39; intorno" tags="" position="375,650" size="100,100">[[Continue -&gt; 1.04]]</tw-passagedata><tw-passagedata pid="37" name="Vado direttamente da lui" tags="" position="500,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[Entro nella tenda e ci scambiamo un rispettoso cenno di saluto. Poi ci sediamo l&#39;uno di fronte all&#39;altro.](stop:)]
+[[Mi guardo ancora un po&#39; intorno]]</tw-passagedata><tw-passagedata pid="35" name="Mi guardo ancora un po&#39; intorno" tags="" position="375,650" size="100,100">[[Continue -&gt; 1.04]]</tw-passagedata><tw-passagedata pid="36" name="Vado direttamente da lui" tags="" position="500,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[Entro nella tenda e ci scambiamo un rispettoso cenno di saluto. Poi ci sediamo l&#39;uno di fronte all&#39;altro.](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[Sono molto curioso perchè non ho mai incontrato una tribù indigena prima, quindi chiedo al capo villaggio come si chiama e ulteriori informazioni sulla sua tribù.](stop:)] 
 
 (live: 5s)[(t8n:&quot;dissolve&quot;)[Risponde che il suo nome è Ne-hi-ga-kuh e che è il capo della tribù dei Ponkas. Dato che non voleva combattere nella guerra e il suo raccolto era completamente andato a male, la sua tribù è temporaneamente alleata con gli Omahas, che li hanno invitati a vivere a Black Bird.](stop:)]
 
 (live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.04]](stop:)]
-</tw-passagedata><tw-passagedata pid="38" name="1.19" tags="" position="1275,1650" size="100,100">What do I do now?
-I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
-
+</tw-passagedata><tw-passagedata pid="37" name="1.19" tags="" position="1275,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
+I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird.](stop:)]
+(live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Dances]]
-[[Story]]
-</tw-passagedata><tw-passagedata pid="39" name=" 1.04" tags="" position="500,775" size="100,100">[[Voglio saperne di più sui bambini del villaggio]]
-[[Racconto di più su chi sono]]</tw-passagedata><tw-passagedata pid="40" name="Voglio saperne di più sui bambini del villaggio" tags="" position="500,900" size="100,100">Il capo villaggio mi spiega che i bambini vengono separati dai loro genitori e mandati alla missione cattolica per occidentalizzarsi e imparare l&#39;inglese.
+[[Story]]](stop:)] </tw-passagedata><tw-passagedata pid="38" name=" 1.04" tags="" position="500,775" size="100,100">[[Voglio saperne di più sui bambini del villaggio]]
+[[Racconto di più su chi sono]]</tw-passagedata><tw-passagedata pid="39" name="Voglio saperne di più sui bambini del villaggio" tags="" position="500,900" size="100,100">Il capo villaggio mi spiega che i bambini vengono separati dai loro genitori e mandati alla missione cattolica per occidentalizzarsi e imparare l&#39;inglese.
 
 Ogni volta che tornano a casa non riconoscono più il modo di vivere dei loro genitori, rifiutano le tradizioni e sperano di poter lasciare definitivamente il villaggio in futuro.
 In questo modo la loro comunità sparirà presto.
 
 Condivido il punto di vista del capo perchè penso che questa minoranza e la sua cultura debbano essere preservate. 
 
-[[Continue -&gt;1.05]]</tw-passagedata><tw-passagedata pid="41" name="Racconto di più su chi sono" tags="" position="625,900" size="100,100">[[Continue -&gt; 1.005]]</tw-passagedata><tw-passagedata pid="42" name="1.05" tags="" position="500,1025" size="100,100">[[Continue -&gt; 1.06]]</tw-passagedata><tw-passagedata pid="43" name=" 1.06" tags="" position="500,1150" size="100,100">[[Continue -&gt; 1.07]]</tw-passagedata><tw-passagedata pid="44" name=" 1.07" tags="" position="500,1275" size="100,100">[[Continue -&gt; 1.08]]</tw-passagedata><tw-passagedata pid="45" name=" 1.08" tags="" position="500,1400" size="100,100">[[Accetto]]
-[[Rifiuto]]</tw-passagedata><tw-passagedata pid="46" name="Accetto" tags="" position="500,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="47" name="Rifiuto" tags="" position="625,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="48" name=" 1.09" tags="" position="500,1650" size="100,100">[[Danze]]
-[[Storia]]</tw-passagedata><tw-passagedata pid="49" name="Danze" tags="" position="437.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="50" name="Storia" tags="" position="562.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="51" name=" 1.005" tags="" position="625,1025" size="100,100">[[Continue -&gt; 1.006]]</tw-passagedata><tw-passagedata pid="52" name=" 1.006" tags="" position="625,1150" size="100,100">[[Continue -&gt; 1.007]]</tw-passagedata><tw-passagedata pid="53" name=" 1.007" tags="" position="625,1275" size="100,100">[[Continue -&gt; 1.008]]</tw-passagedata><tw-passagedata pid="54" name=" 1.008" tags="" position="625,1400" size="100,100">Il capo ordina ad un membro della tribù di regalarmi una pipa tradizionale, chiamata calumet, e lui se ne separa molto dolorosamente. All&#39;inizio non capisco il perchè, poi mi spiegano che quella pipa è sua, aveva un valore affettivo e ora ne sarebbe rimasto senza. 
+[[Continue -&gt;1.05]]</tw-passagedata><tw-passagedata pid="40" name="Racconto di più su chi sono" tags="" position="625,900" size="100,100">[[Continue -&gt; 1.005]]</tw-passagedata><tw-passagedata pid="41" name="1.05" tags="" position="500,1025" size="100,100">[[Continue -&gt; 1.06]]</tw-passagedata><tw-passagedata pid="42" name=" 1.06" tags="" position="500,1150" size="100,100">[[Continue -&gt; 1.07]]</tw-passagedata><tw-passagedata pid="43" name=" 1.07" tags="" position="500,1275" size="100,100">[[Continue -&gt; 1.08]]</tw-passagedata><tw-passagedata pid="44" name=" 1.08" tags="" position="500,1400" size="100,100">[[Accetto]]
+[[Rifiuto]]</tw-passagedata><tw-passagedata pid="45" name="Accetto" tags="" position="500,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="46" name="Rifiuto" tags="" position="625,1525" size="100,100">[[Continue -&gt; 1.09]]</tw-passagedata><tw-passagedata pid="47" name=" 1.09" tags="" position="500,1650" size="100,100">[[Danze]]
+[[Storia]]</tw-passagedata><tw-passagedata pid="48" name="Danze" tags="" position="437.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="49" name="Storia" tags="" position="562.5,1775" size="100,100"></tw-passagedata><tw-passagedata pid="50" name=" 1.005" tags="" position="625,1025" size="100,100">[[Continue -&gt; 1.006]]</tw-passagedata><tw-passagedata pid="51" name=" 1.006" tags="" position="625,1150" size="100,100">[[Continue -&gt; 1.007]]</tw-passagedata><tw-passagedata pid="52" name=" 1.007" tags="" position="625,1275" size="100,100">[[Continue -&gt; 1.008]]</tw-passagedata><tw-passagedata pid="53" name=" 1.008" tags="" position="625,1400" size="100,100">Il capo ordina ad un membro della tribù di regalarmi una pipa tradizionale, chiamata calumet, e lui se ne separa molto dolorosamente. All&#39;inizio non capisco il perchè, poi mi spiegano che quella pipa è sua, aveva un valore affettivo e ora ne sarebbe rimasto senza. 
 [[Accetto -&gt; Accetto il regalo]]
-[[ Rifiuto -&gt; Rifiuto il regalo]]</tw-passagedata><tw-passagedata pid="55" name=" Accetto il regalo" tags="" position="750,1525" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="56" name=" Rifiuto il regalo" tags="" position="750,1400" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="57" name=" 1.009" tags="" position="875,1525" size="100,100">[[Danze -&gt;Danze1]]
+[[ Rifiuto -&gt; Rifiuto il regalo]]</tw-passagedata><tw-passagedata pid="54" name=" Accetto il regalo" tags="" position="750,1525" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="55" name=" Rifiuto il regalo" tags="" position="750,1400" size="100,100">[[Continue -&gt; 1.009]]</tw-passagedata><tw-passagedata pid="56" name=" 1.009" tags="" position="875,1525" size="100,100">[[Danze -&gt;Danze1]]
 [[ Storia -&gt; Storia1]]
-</tw-passagedata><tw-passagedata pid="58" name="Danze1" tags="" position="875,1650" size="100,100"></tw-passagedata><tw-passagedata pid="59" name=" Storia1" tags="" position="750,1650" size="100,100"></tw-passagedata><tw-passagedata pid="60" name="2.1" tags="" position="1500,300" size="100,100">Ne-ki-ga-huh: 
+</tw-passagedata><tw-passagedata pid="57" name="Danze1" tags="" position="875,1650" size="100,100"></tw-passagedata><tw-passagedata pid="58" name=" Storia1" tags="" position="750,1650" size="100,100"></tw-passagedata><tw-passagedata pid="59" name="2.1" tags="" position="1500,300" size="100,100">Ne-ki-ga-huh: 
 I am the chieftain of the Ponkas tribe. 
 My tribe recently has decided to ally with the Omahas so we have moved to Black Bird in order to run away from the war.
 It&#39;s the 30th of September 1863...
@@ -354,29 +414,26 @@ I have decided to deviate from the agreed route to visit the village of Black Bi
 It&#39;s the 30th of September 1863..
 
 [[Continue -&gt;decisione]]
-</tw-passagedata><tw-passagedata pid="61" name="decisione" tags="" position="1500,425" size="100,100">Ne-ki-ga-huh:
+</tw-passagedata><tw-passagedata pid="60" name="decisione" tags="" position="1500,425" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+Ne-ki-ga-huh:
 I see a group of &quot;pale faces&quot; arriving at the village. 
 There are children coming back to their parents&#39; tents escorted by soldiers.
 I recognize everyone apart from one man.
-What do I do?
-(if: $a is &gt; 0 or $b is &gt; 0) [You have already made your decision]
-(else:) [
+What do I do?(if: $a is &gt; 0 or $b is &gt; 0) [You have already made your decision](else:) [
 (link: &quot;I talk to him&quot;)[\
 	(set: $a to it + 1)\
 	(go-to: &quot;decisione&quot;)\
 ]
 (link: &quot;I observe what his intentions are&quot;)[\
 	(set: $b to it + 1)\
-	(go-to: &quot;decisione&quot;)\
-]]
+	(go-to: &quot;decisione&quot;)\]]
+    
 Capellini:
 I reach the indigenous village with an interpreter and I glance at the tents and horses. 
 I can see the indigenous people dressed in the traditional way.
 There&#39;s a man outside the biggest tent that seems to be the chieftain.
-What do I do?
-(if: $c is &gt; 0 or $d is &gt;0) [You have already made your decision]
-(else:) [
-(link: &quot;I go there and talk to him&quot;)[\
+What do I do?(if: $c is &gt; 0 or $d is &gt;0) [You have already made your decision]
+(else:) [(link: &quot;I go there and talk to him&quot;)[\
 	(set: $c to it + 1)\
 	(go-to: &quot;decisione&quot;)\
 ]
@@ -385,13 +442,10 @@ What do I do?
 	(go-to: &quot;decisione&quot;)\
 ]]
 
-(if: $a is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]]
-(if: $a is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]]
-(if: $b is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]]
-(if: $b is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]]
+(if: $a is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]](if: $a is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]](if: $b is &gt; 0 and $c is &gt; 0)  [[Continue -&gt;parlo]](if: $b is &gt; 0 and $d is &gt; 0)  [[Continue -&gt;osservo]]
+&lt;/div&gt;
 
-
-</tw-passagedata><tw-passagedata pid="62" name="parlo" tags="" position="1425,575" size="100,100">Capellini:
+</tw-passagedata><tw-passagedata pid="61" name="parlo" tags="" position="1425,575" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
 We exchange a respectful greeting and then we sit in front of each other, near the fire.
 
 I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.
@@ -401,7 +455,8 @@ My name is Ne-hi-ga-kuh and I&#39;m the chieftain of the Ponkas tribe. My tribe 
 
 I am very curious about this &quot;pale face&quot; because he has lots of objects that I have never seen before and his behavior seems totally different from the other &quot;pale faces&quot; that I&#39;ve met before. 
 
-[[Continue-&gt;choice]]</tw-passagedata><tw-passagedata pid="63" name="osservo" tags="" position="1600,575" size="100,100">Ne-ki-ga-huh:
+[[Continue-&gt;choice]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="osservo" tags="" position="1600,575" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Ne-ki-ga-huh:
 Suddenly a child approaches the stranger and so I have the chance to study his behavior towards the members of our tribe. 
 
 Capellini:
@@ -413,22 +468,21 @@ He comes closer and asks, in english, why I am there.
 I am astonished to hear a child speak english so well. 
 The child sees my reaction and thinks that I am there to talk to the chieftain so he takes me to the chieftain&#39;s tent. 
 
-[[[Continue -&gt;parlo]]</tw-passagedata><tw-passagedata pid="64" name="choice" tags="" position="1500,700" size="100,100">Ne-ki-ga-kuh:
+[[[Continue -&gt;parlo]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="choice" tags="" position="1500,700" size="100,100">Ne-ki-ga-kuh:
 What do I do?
-(if: $e is &gt; 0 or $f is &gt; 0) [You have already made your decision]
-(else:) [
+(if: $e is &gt; 0 or $f is &gt; 0) [You have already made your decision](else:) [
 (link: &quot;Do I listen to what the man has to tell me?&quot;)[\
 	(set: $e to it + 1)\
 	(go-to: &quot;choice&quot;)\
 ]
 (link: &quot;Do I ask him who he is?&quot;)[\
 	(set: $f to it + 1)\
-	(go-to: &quot;choice&quot;)\
-]]
+	(go-to: &quot;choice&quot;)\]]
+    
 Capellini:
 What do I do?
-(if: $g is &gt; 0 or $h is &gt; 0) [You have already made your decision]
-(else:) [
+(if: $g is &gt; 0 or $h is &gt; 0) [You have already made your decision](else:) [
 (link: &quot;Do I want to tell the chieftain who I am and why I am there? &quot;)[\
 	(set: $g to it + 1)\
 	(go-to: &quot;choice&quot;)\
@@ -437,18 +491,15 @@ What do I do?
 	(set: $h to it + 1)\
 	(go-to: &quot;choice&quot;)\
 ]]
-
-(if: $e is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]]
-(if: $e is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
-(if: $f is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]]
-(if: $f is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
-</tw-passagedata><tw-passagedata pid="65" name="capellini" tags="" position="1425,825" size="100,100">Capellini: 
+(if: $e is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]](if: $e is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]](if: $f is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]](if: $f is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
+</tw-passagedata><tw-passagedata pid="64" name="capellini" tags="" position="1425,825" size="100,100">Capellini: 
 I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
 [[Continue -&gt;2.4]]
-(set:$capellini to &quot;capellini&quot;)</tw-passagedata><tw-passagedata pid="66" name="children" tags="" position="1600,825" size="100,100">Ne-ki-ga-huh:
+(set:$capellini to &quot;capellini&quot;)</tw-passagedata><tw-passagedata pid="65" name="children" tags="" position="1600,825" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+Ne-ki-ga-huh:
 I explain that the children are separated from their parents and sent to the mission to learn english and the christian religion.
 
 Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
@@ -459,7 +510,8 @@ I agree with what he said because I think that this minority and their culture n
 
 I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
 [[Continue -&gt;2.04]]
-(set:$capellini to &quot;children&quot;)</tw-passagedata><tw-passagedata pid="67" name="2.4" tags="" position="1425,975" size="100,100">Capellini:
+(set:$capellini to &quot;children&quot;)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="2.4" tags="" position="1425,975" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
 I ask one of the natives to take a portrait of him and he agrees. 
 
 When the indians realize that I am taking a profile portrait they start to feel angry and I realize that by looking at their faces. I do not know that the indians did not allow to take profile portraits, but only frontal ones. 
@@ -473,7 +525,8 @@ I feel that the respect that we&#39;ve given to him was betrayed and I start fee
 
 I think that the &quot;pale face&quot; has realized that he did something wrong by looking at our faces, so I explain that it&#39;s not allowed to take profile portraits in our culture. 
 He immediately erases the portrait and starts sketching a frontal one. 
-[[Continue -&gt; 2.5]]</tw-passagedata><tw-passagedata pid="68" name="2.04" tags="" position="1600,975" size="100,100">Capellini:
+[[Continue -&gt; 2.5]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="2.04" tags="" position="1600,975" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
 I ask one of the natives to take a portrait of him and he agrees. 
 
 When the natives realize that I am taking a profile portrait they suggest to change my point of view. I did not know that the indians do not allow to take profile portraits, but only frontal ones. 
@@ -484,26 +537,28 @@ Ne-ki-ga-huh:
 I see that the stranger asks one of my men to take a portrait of him and he agrees. 
 
 I feel that the respect that we&#39;ve given to him was betrayed when he starts drawing the face from a profile point of view. But I realize that, maybe, he doesn&#39;t know that it&#39;s not allowed to take profile portaits of our people. So I ask him if he can erase everything and draw a frontal portrait instead. 
-[[Continue -&gt; 2.05]]</tw-passagedata><tw-passagedata pid="69" name=" 2.05" tags="" position="1600,1100" size="100,100">Capellini: 
+[[Continue -&gt; 2.05]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name=" 2.05" tags="" position="1600,1100" size="100,100">Capellini: 
 I feel so happy about the portrait, so I decided to gift a telescope to the natives as a reward for their patience and respect.
 
 Ne-ki-ga-huh:
 The stranger shows us the finished portrait and it&#39;s really well done. 
 He decides to gift us an object that I&#39;ve never seen before as a reward of our patience and respect, he says. 
 
-[[Continue -&gt; 2.06]]</tw-passagedata><tw-passagedata pid="70" name=" 2.5" tags="" position="1425,1100" size="100,100">Capellini: 
+[[Continue -&gt; 2.06]]</tw-passagedata><tw-passagedata pid="69" name=" 2.5" tags="" position="1425,1100" size="100,100">Capellini: 
 I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made.  
 
 Ne-ki-ga-huh:
 The stranger shows us the finished portrait and it&#39;s really well done. 
 He decides to gift us an object that I&#39;ve never seen before. 
 
-[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="71" name=" 2.06" tags="" position="1600,1225" size="100,100">Capellini:
+[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="70" name=" 2.06" tags="" position="1600,1225" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
 The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
 The man explains to us that this object will allow us to see the sky, moon and stars. Every member of the tribe seems so excited and starts calling all the others to gather and try to use this object. 
-[[Continue -&gt;regalo1]]</tw-passagedata><tw-passagedata pid="72" name="regalo1" tags="" position="1600,1350" size="100,100">(set:$result to &quot;....&quot; )
+[[Continue -&gt;regalo1]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="regalo1" tags="startup" position="1600,1350" size="100,100">(set:$result to &quot;....&quot; )
 Ne-ki-ga-huh:
 We decide to reciprocate giving the stranger a gift. 
 
@@ -531,12 +586,13 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $m is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
 (if: $m is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
 (if: $n is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
-(if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]</tw-passagedata><tw-passagedata pid="73" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
+(if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
+</tw-passagedata><tw-passagedata pid="72" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
 The indians are so surprised by my gift, I can perceive that actually they&#39;re not angry at me anymore. Almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
 The man explains to us that this object will allow us to see the sky, moon and stars. The resentment that everyone felt before is replaced by excitement: I can hear people calling others to gather and try to use this object. 
-[[Continue -&gt;regalo]]</tw-passagedata><tw-passagedata pid="74" name="regalo" tags="" position="1425,1350" size="100,100">(set:$result to &quot;....&quot; )
+[[Continue -&gt;regalo]]</tw-passagedata><tw-passagedata pid="73" name="regalo" tags="startup" position="1425,1350" size="100,100">(set:$result to &quot;....&quot; )
 Ne-ki-ga-huh:
 We decide to reciprocate giving the stranger a gift. 
 
@@ -564,26 +620,31 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $i is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
 (if: $i is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
 (if: $l is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
-(if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]</tw-passagedata><tw-passagedata pid="75" name="Accept1" tags="" position="1525,1475" size="100,100">Capellini:
+(if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
+</tw-passagedata><tw-passagedata pid="74" name="Accept1" tags="" position="1525,1475" size="100,100">Capellini:
 The chieftain orders a man to give me his (print: $result).
 The native is very reluctant and starts crying as soon as I get the (print: $result) in my hands. 
 At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. 
-[[Continue-&gt;End]]</tw-passagedata><tw-passagedata pid="76" name="Refuse1" tags="" position="1400,1475" size="100,100">Capellini:
+[[Continue-&gt;End]]
+(set: $i to 0)
+(set:$l to 0)</tw-passagedata><tw-passagedata pid="75" name="Refuse1" tags="startup" position="1375,1475" size="100,100">(set: $i to 0)(set:$l to 0)
+Capellini:
 I don&#39;t accept the gift because these people are living in extreme poverty. 
 If I accepted a gift, one of the indians had to give up one of their belongings. 
-[[Continue-&gt;End]]</tw-passagedata><tw-passagedata pid="77" name="Accept2" tags="" position="1725,1350" size="100,100">Capellini:
+[[Continue-&gt;End]]
+</tw-passagedata><tw-passagedata pid="76" name="Accept2" tags="" position="1725,1350" size="100,100">Capellini:
 I accept the (print: $result).
 I&#39;m very happy that I can bring home with me something that will remind of this moment.
 I wander around the village a little bit more.
 [[Continue -&gt;end1]]
-</tw-passagedata><tw-passagedata pid="78" name="Refuse2" tags="" position="1725,1475" size="100,100">(if: $result is &quot;mocassin&quot;)[Capellini:
+</tw-passagedata><tw-passagedata pid="77" name="Refuse2" tags="" position="1725,1475" size="100,100">(if: $result is &quot;mocassin&quot;)[Capellini:
 I don&#39;t accept the gift because these people are living in extreme poverty. 
 If I accepted a gift, one of the indians had to give up one of their belongings. ]
 (else:)
 [I free the frog saying that it would be better if it lived in its natural background. 
 
 I wander around the village a little bit more.]
-[[Continue -&gt;end1]]</tw-passagedata><tw-passagedata pid="79" name="End" tags="" position="1475,1600" size="100,100">Capellini:
+[[Continue -&gt;end1]]</tw-passagedata><tw-passagedata pid="78" name="End" tags="" position="1475,1600" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
@@ -591,73 +652,32 @@ I can decide to know a little bit more about the traditional dances or I can sit
 [[Story]]
 
 Ne-ki-ga-huh:
-Riflessione 
+I sit down and start thinking about the future of my tribe.
+&quot;We&#39;re running away from a war between natives and &quot;pale faces&quot;, the colonizers are taking our children away, so our traditions will not be passed on.
+In this way, our tribe and our culture will soon disappear...&quot;
 
-[[Continue -&gt;indianend]]</tw-passagedata><tw-passagedata pid="80" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
+[[Continue -&gt;indianend]]</tw-passagedata><tw-passagedata pid="79" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
 [[Dances]]
 [[Story]]
  Ne-ki-ga-huh:
- riflessione
- 
- [[Continue-&gt;indianend]]</tw-passagedata><tw-passagedata pid="81" name=" Continue1" tags="form" position="1700,2000" size="100,100">
-Which color better describes your experience?
-(checkbox: bind $green, &quot;green&quot;) 
-(checkbox: bind $red, &quot;yellow&quot;) 
-(checkbox: bind $yellow, &quot;red&quot;) 
-(checkbox: bind $blue, &quot;blue&quot;) 
+I sit down and start thinking about the future of my tribe.
+&quot;We&#39;re running away from a war between natives and &quot;pale faces&quot;, the colonizers are taking our children away, so our traditions will not be passed on.
+In this way, our tribe and our culture will soon disappear...&quot;
+ [[Continue-&gt;indianend]]</tw-passagedata><tw-passagedata pid="80" name="indianend" tags="card" position="1850,1650" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+&lt;h1&gt;Local&lt;/h1&gt;
+&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;Monocular telescope&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/e35fa12f7d4243bcad062aa411949fa0/embed&quot;&gt; &lt;/iframe&gt; &lt;/div&gt;
+&lt;p&gt;You think that cultural exchange can enrich yourself and not only the visitors that are curious to know more about your customs. You&#39;re very curious to set a special bonding with travelers so that each encounter will be unforgettable. 
 
-
-Which color better describes your experience?
-(checkbox: bind $surprise, &quot;surprise&quot;) 
-(checkbox: bind $resentment, &quot;resentment&quot;) 
-(checkbox: bind $hope, &quot;hope&quot;) 
-(checkbox: bind $anger, &quot;anger&quot;) 
-
-Which was the most relevant theme of the story?
-(checkbox: bind $curiosity, &quot;Curiosity&quot;) 
-(checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
-(checkbox: bind $political, &quot;Political and social change&quot;) 
-(checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
-
-Which of your travel experiences can be compared to this?
-(input-box: bind $code, &quot;XXX=&quot;)
-[[Continue]]</tw-passagedata><tw-passagedata pid="82" name="indianend" tags="" position="1850,1650" size="100,100">Which color better describes your experience?
-(checkbox: bind $green, &quot;green&quot;) 
-(checkbox: bind $red, &quot;yellow&quot;) 
-(checkbox: bind $yellow, &quot;red&quot;) 
-(checkbox: bind $blue, &quot;blue&quot;) 
-
-
-Which color better describes your experience?
-(checkbox: bind $surprise, &quot;surprise&quot;) 
-(checkbox: bind $resentment, &quot;resentment&quot;) 
-(checkbox: bind $hope, &quot;hope&quot;) 
-(checkbox: bind $anger, &quot;anger&quot;) 
-
-Which was the most relevant theme of the story?
-(checkbox: bind $curiosity, &quot;Curiosity&quot;) 
-(checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
-(checkbox: bind $political, &quot;Political and social change&quot;) 
-(checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
-
-What other encounter in your life did this experience bring to mind?
-(input-box: bind $code, &quot;XXX=&quot;)
-</tw-passagedata><tw-passagedata pid="83" name="Continue" tags="form" position="1700,2125" size="100,100">(if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $green is true and $resentment is true or $anger is true and $rel is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $green is true and $surprise is true or $hope is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $green is true and $anger is true or $resentment is true and $political is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\verde4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso1.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $red is true and $resentment is true or $anger is true and $political is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso3.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $red is true and $surprise is true or $hope is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso2.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-(else-if:$result is &quot;calumet&quot; and $red is true and $anger is true or $resentment is true and $rel is true or $curiosity is true or $imm is true)[&lt;iframe src=&quot;C:\Users\crosi\Documents\GitHub\cena-form\rosso4.html&quot; style=&quot;height:100%;width:100%;&quot;&gt;&lt;/iframe&gt;]
-</tw-passagedata><tw-passagedata pid="84" name=" Continue2" tags="form" position="1425,2050" size="100,100">
+Which encounter did the experience bring to your mind?
+ (input-box: bind $code, &quot;XXX=&quot;)&lt;/p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name=" Continue2" tags="form" position="1425,2050" size="100,100">&lt;div class=&quot;box-container&quot;&gt;&lt;p&gt;
       1. Which color better describes your experience?
       (checkbox: bind $green, &quot;green&quot;) 
-      (checkbox: bind $red, &quot;yellow&quot;) 
-      (checkbox: bind $yellow, &quot;red&quot;) 
+      (checkbox: bind $red, &quot;red&quot;) 
+      (checkbox: bind $yellow, &quot;yellow&quot;) 
       (checkbox: bind $blue, &quot;blue&quot;) 
 
 
@@ -675,28 +695,100 @@ What other encounter in your life did this experience bring to mind?
 
       4. Which of your travel experiences can be compared to this?
       (input-box: bind $code, &quot;XXX=&quot;)
-      &lt;span class=&#39;red&#39;&gt;[[Continue-&gt;continue3]]&lt;/span&gt;
-
-</tw-passagedata><tw-passagedata pid="85" name="continue3" tags="card" position="1425,2200" size="100,100">&lt;div class=&quot;box-content&quot;&gt;
+      &lt;span class=&#39;red&#39;&gt;[[Continue-&gt;continue3]]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="continue3" tags="card" position="1425,2200" size="100,100">&lt;div class=&quot;box-content&quot;&gt;
 (if:$capellini is &quot;capellini&quot;)[&lt;h1&gt;Tourist&lt;/h1&gt;]
 (else-if:$capellini is &quot;children&quot;)[&lt;h1&gt;Explorer&lt;/h1&gt;]
-(if:$result is &quot;Calumet&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Ceremonial Pipe&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/a9c438440fe7457ba7c34d44285d8b45/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;](else-if:$result is &quot;Frog&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;タゴガエル 🐸 ♂ Tago&#39;s Brown Frog, Rana tagoi tagoi&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/8dfd876bedfa4172922728777ab5ae24/embed&quot;&gt; &lt;/iframe&gt; &lt;/div&gt;](else-if:$result is &quot;mocassin&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Native American Shoe High Res&quot; frameborder=&quot;0&quot;allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-trackingexecution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/dc0d7dcd393345b3bdae3795d18bc279/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;](if:$capellini is&quot;capellini&quot;)[](else-if:$capellini is &quot;children&quot;)[The choices that you&#39;ve made inside the experience set that you&#39;re an explorer! This means that whenever you&#39;re visiting a country, you’re very curious and keen to do authentic experiences: meeting the locals, immersing in their lives, and trying to understand social or political changes.](if:$green is true and $surprise is true or $hope is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You believe that since nature respects us, we need to respect it too and be careful about the choices that we make and that could alter this equilibrium. 
-Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ](else-if:$green is true and $resentment is true or $anger is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel frustrated that nowadays nature is not being respected enough, and that climate change is a direct consequence of it. Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ](else-if:$green is true and $surprise is true or $hope is true and $political is true or $curiosity is true or $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+(if:$result is &quot;Calumet&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Ceremonial Pipe&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/a9c438440fe7457ba7c34d44285d8b45/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;](else-if:$result is &quot;Frog&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;タゴガエル 🐸 ♂ Tago&#39;s Brown Frog, Rana tagoi tagoi&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/8dfd876bedfa4172922728777ab5ae24/embed&quot;&gt; &lt;/iframe&gt; &lt;/div&gt;](else-if:$result is &quot;mocassin&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Native American Shoe High Res&quot; frameborder=&quot;0&quot;allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-trackingexecution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/dc0d7dcd393345b3bdae3795d18bc279/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;]&lt;p&gt;(if:$capellini is&quot;capellini&quot;)[](else-if:$capellini is &quot;children&quot;)[The choices that you&#39;ve made inside the experience set that you&#39;re an explorer! This means that whenever you&#39;re visiting a country, you’re very curious and keen to do authentic experiences: meeting the locals, immersing in their lives, and trying to understand social or political changes.](if:$green is true and $surprise is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You believe that since nature respects us, we need to respect it too and be careful about the choices that we make and that could alter this equilibrium. 
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ]
+(if:$green is true and $hope is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You believe that since nature respects us, we need to respect it too and be careful about the choices that we make and that could alter this equilibrium. 
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ](else-if:$green is true and $resentment is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel frustrated that nowadays nature is not being respected enough, and that climate change is a direct consequence of it. Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ]
+(else-if:$green is true and $anger is true and $rel is true)[You’ve chosen green and the relationship between man and nature: this means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel frustrated that nowadays nature is not being respected enough, and that climate change is a direct consequence of it. Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature than big cities. ]
+(else-if:$green is true and $surprise is true and $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
 Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
-You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$green is true and $anger is true or $resentment is true and $political is true or $curiosity is true or $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
-Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ](else-if:$red is true and $surprise is true or $hope is true and $political is true)[-	You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $surprise is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
 Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
-You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$red is true and $resentment is true or $anger is true and $political is true)[You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $hope is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $hope is true and $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $hope is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $surprise is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$green is true and $anger is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$green is true and $anger is true or $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$green is true and $anger is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$green is true and $resentment is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$green is true and $resentment is true or $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$green is true and $resentment is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
+(else-if:$red is true and $surprise is true and $political is true)[You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $hope is true and $political is true)[You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $resentment is true and $political is true)[You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
 Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. You have these injustices close to your heart and you feel that even you should fight for them.
 You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
-(else-if:$red is true and $surprise is true or $hope is true and $rel is true or $curiosity is true or $imm is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+(else-if:$red is true and $anger is true and $political is true)[You’ve chosen red and the political/social change: this means that you’re a very energetic person, focused on the present and constantly trying to change it for the better. 
+Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. You have these injustices close to your heart and you feel that even you should fight for them.
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $surprise is true and $rel is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
 You try to immerse yourself in the culture that you’re discovering as much as you can. You hope that these traditions and different ways of living will survive in the future. ]
-(else-if:$red is true and $anger is true or $resentment is true and $rel is true or $curiosity is true or $imm is true)[-	You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
-You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$yellow is true and $surprise is true or $hope is true)[•	You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re always looking at how locals live and learn more about their traditions. 
-You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$yellow is true and $resentment is true or $anger is true)[•	You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re perceptive about social differences and the problems that the locals have to face.
-You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$blue is true and $surprise is true or $hope is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you’ve never had prejudices and so you’re always ready to embrace different cultures and ethnicities.
-Whenever you’re visiting a foreign country, you’re always searching for authentic experiences, and you wouldn’t mind spending a few days living with a local family.](else-if:$blue is true and $anger is true or $resentment is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]
-&lt;/div&gt;</tw-passagedata></tw-storydata>
+(else-if:$red is true and $surprise is true and $curiosity is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You hope that these traditions and different ways of living will survive in the future. ]
+(else-if:$red is true and $surprise is true and $imm is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You hope that these traditions and different ways of living will survive in the future. ]
+(else-if:$red is true and $hope is true and $curiosity is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You hope that these traditions and different ways of living will survive in the future. ]
+(else-if:$red is true and $hope is true and $imm is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You hope that these traditions and different ways of living will survive in the future. ]
+(else-if:$red is true and $anger is true  and $rel is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $anger is true and $curiosity is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $anger is true and $imm is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $resentment is true  and $rel is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $resentment is true and $curiosity is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$red is true and $resentment is true and $imm is true)[You’ve chosen red as the color that represents the experience the most. This means that you’re a very energetic person, focused on the present and constantly trying to change it for the better.
+You try to immerse yourself in the culture that you’re discovering as much as you can. You’re disheartened that traditions and different ways of living are progressively disappearing.  You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$yellow is true and $surprise is true)[You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re always looking at how locals live and learn more about their traditions. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$yellow is true and  $hope is true)[You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re always looking at how locals live and learn more about their traditions. 
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$yellow is true and $anger is true)[You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re perceptive about social differences and the problems that the locals have to face.
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
+(else-if:$yellow is true and $resentment is true)[You’ve chosen yellow as the color that represents the experience the most. This means that you’re always eager to find answers and to discover new things. Whenever you’re visiting a foreign country, you’re perceptive about social differences and the problems that the locals have to face.
+You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.](else-if:$blue is true and $surprise is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you’ve never had prejudices and so you’re always ready to embrace different cultures and ethnicities.
+Whenever you’re visiting a foreign country, you’re always searching for authentic experiences, and you wouldn’t mind spending a few days living with a local family.]
+(else-if:$blue is true and $hope is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you’ve never had prejudices and so you’re always ready to embrace different cultures and ethnicities.
+Whenever you’re visiting a foreign country, you’re always searching for authentic experiences, and you wouldn’t mind spending a few days living with a local family.](else-if:$blue is true and $resentment is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]
+(else-if:$blue is true and $anger is true is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]&lt;/p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Health Based Styling" tags="footer" position="1150,1825" size="100,100">(if: $i is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-1&#39;);&lt;/script&gt;]
+(else-if: $l is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-4&#39;);&lt;/script&gt;]
+(if: $m is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-3&#39;);&lt;/script&gt;]
+(else-if: $n is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-2&#39;);&lt;/script&gt;]
+</tw-passagedata><tw-passagedata pid="84" name="I go there and talk to him" tags="" position="1000,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I enter the tent and we immediately exchange a respectful greeting. Then, we sit in front of each other.](stop:)]
+
+(live: 2s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
+
+(live: 5s)[(t8n:&quot;dissolve&quot;)[He answers that his name is Ne-hi-ga-kuh and he&#39;s the chieftain of the Ponkas tribe. His tribe is temporarily allied with the Omahas and so they have been invited to stay at Black Bird because they did not want to fight in the war and their harvest was rotten.](stop:)]
+
+(live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.3]](stop:)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
