@@ -11,17 +11,16 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play CENA.</tw-noscript></noscript></tw-story>
 <tw-storydata name="CENA" startnode="27" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="81BE0AE5-07E1-4622-9F0F-C778087AAB25" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
-video#bgvid { 
-	position: fixed; right: 0; bottom: 0;
-	min-width: 100%; min-height: 100%;
-	width: auto; height: auto; z-index: -100; 
-	background: url(loop-hd.jpg) no-repeat;
-	background-size: cover; 
-	z-index: 0;
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+   	transform: translateX(calc((100% - 100vw)/2));
+  	transform: translateY(calc((100% - 100vh)/2));
 }
 
-video { display: block; } 
 tw-story[tags="mappa"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/thumbnail_IMG_3099.jpg?raw=true');
   background-position:50% 50%;
@@ -279,7 +278,7 @@ In this way their community will disappear soon. ](stop:)]
 
 (live: 5s)[(t8n:&quot;dissolve&quot;)[I agree with what he said because I think that this minority and their culture needs to be preserved somehow. ](stop:)]
 
-(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.
+(live: 7s)[(transition-arrive:&quot;dissolve&quot;)[I introduce myself to him saying that I am very interested in knowing more about his tribe, traditions and how they live in close contact with nature.  I&#39;ve studied it all my life but, I have never experienced such a special connection with it in my daily life. So I&#39;d like to learn that from them.]
 
 [[Continue -&gt; 1.4]](stop:)]
 &lt;/div&gt;
@@ -376,11 +375,7 @@ At first, I don&#39;t get why he had such a reaction, then the others tell me th
 [[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="26" name="Feather" tags="indiano" position="1425,150" size="100,100">A mirror reflects my image: I impersonate Ne-ki-ga-kuh.
 
 
-[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="start" tags="start" position="750,150" size="100,100">&lt;div class=&quot;video-wrapper&quot;&gt;
-&lt;video autoplay muted loop poster=&quot;cake.jpg&quot; id=&quot;bgvid&quot;&gt;
-    &lt;source src=&quot;C:\Users\crosi\Documents\foto 2016\IMG_1919.MOV&quot; type=&quot;video/webm&quot;&gt;
-&lt;/video&gt;
-(set: $linkA to false)
+[[Continue -&gt;2.1]]</tw-passagedata><tw-passagedata pid="27" name="start" tags="start" position="750,150" size="100,100">(set: $linkA to false)
 
 (link: &quot;Start&quot;)[{[
 		(show: ?extra)
@@ -703,7 +698,7 @@ Which encounter did the experience bring to your mind?
       4. Which of your travel experiences can be compared to this?
       (input-box: bind $code, &quot;XXX=&quot;)
       &lt;span class=&#39;red&#39;&gt;[[Continue-&gt;continue3]]&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="continue3" tags="card" position="1425,2200" size="100,100">&lt;div class=&quot;box-content&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="continue3" tags="card" position="1425,2200" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
 (if:$capellini is &quot;capellini&quot;)[&lt;h1&gt;Tourist&lt;/h1&gt;]
 (else-if:$capellini is &quot;children&quot;)[&lt;h1&gt;Explorer&lt;/h1&gt;]
 (if:$result is &quot;Calumet&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Ceremonial Pipe&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/a9c438440fe7457ba7c34d44285d8b45/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;](else-if:$result is &quot;Frog&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt; &lt;iframe title=&quot;タゴガエル 🐸 ♂ Tago&#39;s Brown Frog, Rana tagoi tagoi&quot; frameborder=&quot;0&quot; allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/8dfd876bedfa4172922728777ab5ae24/embed&quot;&gt; &lt;/iframe&gt; &lt;/div&gt;](else-if:$result is &quot;mocassin&quot;)[&lt;div class=&quot;sketchfab-embed-wrapper&quot;&gt;&lt;iframe title=&quot;Native American Shoe High Res&quot; frameborder=&quot;0&quot;allowfullscreen mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; allow=&quot;autoplay; fullscreen; xr-spatial-tracking&quot; xr-spatial-trackingexecution-while-out-of-viewport execution-while-not-rendered web-share src=&quot;https://sketchfab.com/models/dc0d7dcd393345b3bdae3795d18bc279/embed&quot;&gt; &lt;/iframe&gt;&lt;/div&gt;]&lt;p&gt;{(if:$capellini is&quot;capellini&quot;)[The choices that you&#39;ve made inside the experience set that you&#39;re a tourist! This means that whenever you&#39;re visiting a country, you prefer to stick to a touristic route. For example, you enjoy visiting historical sites and trying the local cuisine but you would never sleep at a local’s home.  Therefore, you visit the country from a certain distance, not immersing totally in a new culture. ](else-if:$capellini is &quot;children&quot;)[The choices that you&#39;ve made inside the experience set that you&#39;re an explorer! This means that whenever you&#39;re visiting a country, you’re very curious and keen to do authentic experiences: meeting the locals, immersing in their culture, and trying to understand social or political changes.]}
@@ -716,7 +711,7 @@ Whenever you’re visiting a country, you’re always searching for sustainable 
 (else-if:$capellini is &quot;children&quot; and $green is true and $surprise is true and $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
 Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
 You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
-(else-if:$green is true and $surprise is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
+(else-if::$capellini is &quot;capellini&quot; and $green is true and $surprise is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
 Whenever you’re visiting a foreign country, you’re always looking at how locals live and ask them about their living conditions, problems and how the situation could be changed. 
 You feel that not following touristic routes and making these authentic encounters can enrich your awareness and cultural experience.]
 (else-if:$capellini is &quot;children&quot; and $green is true and $hope is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive towards nature and our relationship with it. 
@@ -737,7 +732,7 @@ Whenever you’re visiting a country, you’re always searching for sustainable 
 Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
 (else-if:$capellini is &quot;children&quot; and $green is true and $anger is true and $political is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
 Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
-(else-if:$green is true and $resentment is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
+(else-if::$capellini is &quot;capellini&quot; and $green $green is true and $resentment is true and $imm is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
 Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
 (else-if:$capellini is &quot;children&quot; and $green is true and $resentment is true or $curiosity is true)[You’ve chosen green as the color that represents the experience the most. This means that you’re very sensitive about nature, trying to live in a close contact with it, almost in a symbiotic way. You feel quite frustrated that all those communities lived and still continue to live in this way are endangered by a capitalistic system.
 Whenever you’re visiting a country, you’re always searching for sustainable solutions, and you’re more interested in visiting small communities that still live an authentic life in nature. ]
@@ -789,13 +784,16 @@ You feel that not following touristic routes and making these authentic encounte
 Whenever you’re visiting a foreign country, you’re always searching for authentic experiences, and you wouldn’t mind spending a few days living with a local family.]
 (else-if:$capellini is &quot;children&quot; and $blue is true and $hope is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you’ve never had prejudices and so you’re always ready to embrace different cultures and ethnicities.
 Whenever you’re visiting a foreign country, you’re always searching for authentic experiences, and you wouldn’t mind spending a few days living with a local family.](else-if:$capellini is &quot;children&quot; and $blue is true and $resentment is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]
-(else-if:$capellini is &quot;children&quot; and $blue is true and $anger is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]}&lt;/p&gt;
-(link: &quot;Let us know your feedback!&quot;)[(goto-url: &#39;https://docs.google.com/forms/d/1wYmKK1XX4-a_h85IS58chDEUk7ZSUvAjCU5sH9IDzLc/edit&#39;)]
+(else-if:$capellini is &quot;children&quot; and $blue is true and $anger is true)[You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, you never have prejudices and so you’re always ready to embrace different cultures and ethnicities. Whenever you’re visiting a foreign country, you feel sympathetic with minorities or communities that are still discriminated. You are likely to take their side and support their legal and social rights.]}
+(link: &quot;Let us know your feedback!&quot;)[(goto-url: &#39;https://docs.google.com/forms/d/1wYmKK1XX4-a_h85IS58chDEUk7ZSUvAjCU5sH9IDzLc/edit&#39;)]&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Health Based Styling" tags="footer" position="1150,1825" size="100,100">(if: $i is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-1&#39;);&lt;/script&gt;]
 (else-if: $l is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-4&#39;);&lt;/script&gt;]
 (if: $m is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-3&#39;);&lt;/script&gt;]
 (else-if: $n is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-2&#39;);&lt;/script&gt;]
-</tw-passagedata><tw-passagedata pid="54" name="I go there and talk to him" tags="" position="1000,650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[We exchange a respectful greeting and then we sit in front of each other, near the fire.](stop:)]
+</tw-passagedata><tw-passagedata pid="54" name="I go there and talk to him" tags="start" position="1000,650" size="100,100">&lt;div class=&quot;video-container&quot;&gt;
+&lt;video autoplay muted loop poster=&quot;cake.jpg&quot; id=&quot;bgvid&quot;&gt;
+    &lt;source src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/background-images/Fireplace.mp4&quot; type=&quot;video/webm&quot;&gt;
+&lt;/video&gt;(live: 0s)[(t8n:&quot;dissolve&quot;)[We exchange a respectful greeting and then we sit in front of each other, near the fire.](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
 
