@@ -15,7 +15,7 @@ video {
     position: fixed;
     left: 60%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-60%, -50%);
     min-width: 100%;
     min-height: 100%;
 }
@@ -41,6 +41,20 @@ tw-story[tags="indiano"] {
   background-position: relative;
   margin-left: auto;
 }
+tw-story[tags="talking"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/capellini%20+%20big%20drum%20talking.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-story[tags="telescope"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/1.6%20-%201.16%20-%20native%20tries%20telescope.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
 tw-story[tags="pipa"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/pipe.png?raw=true');
   background-position:50% 50%;
@@ -50,6 +64,13 @@ tw-story[tags="pipa"] {
 }
 tw-story[tags="rana"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/frog.png?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-story[tags="tents"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/visit%20tents.jpg?raw=true');
   background-position:50% 50%;
   background-size:cover;
   background-position: relative;
@@ -263,12 +284,12 @@ tw-passage[tags="card"] p{
 
 (live: 13s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt;I go there and talk to him]] (stop:)]
 &lt;/div&gt;
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.50%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="7" name=" 1.3" tags="" position="1000,775" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.50%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="7" name=" 1.3" tags="talking" position="1000,775" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Do I want to know more about the children of the village?]]
 [[Do I want to tell the chieftain who I am and why I am there?]]](stop:)] 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="8" name="Do I want to know more about the children of the village?" tags="" position="1000,900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;(set:$capellini to &quot;children&quot;)
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="8" name="Do I want to know more about the children of the village?" tags="talking" position="1000,900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;(set:$capellini to &quot;children&quot;)
 (live: 0s)[(t8n:&quot;dissolve&quot;)[The chieftain explains that the children are separated from their parents and sent to the mission to learn english and the christian religion.](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[Whenever they come back home, they feel unconfortable living their parents&#39; life, they reject all the traditions and aspire only at leaving the village in the future. 
@@ -280,7 +301,7 @@ In this way their community will disappear soon. ](stop:)]
 
 [[Continue -&gt; 1.4]](stop:)]
 &lt;/div&gt;
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="9" name="Do I want to tell the chieftain who I am and why I am there?" tags="" position="1125,900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;(set:$capellini to &quot;capellini&quot;)
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="9" name="Do I want to tell the chieftain who I am and why I am there?" tags="talking" position="1125,900" size="100,100">&lt;div class=&quot;box-container&quot;&gt;(set:$capellini to &quot;capellini&quot;)
 (live: 0s)[(t8n:&quot;dissolve&quot;)[I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. ](stop:)]
@@ -300,7 +321,7 @@ I am very interested in knowing more about your tribe, traditions and how you li
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.6]]](stop:)] 
 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="12" name=" 1.6" tags="" position="1000,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="12" name=" 1.6" tags="telescope" position="1000,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.7]]](stop:)] 
 &lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="13" name=" 1.7" tags="rana" position="1000,1400" size="100,100">&lt;div class=&quot;box-container&quot;&gt;(set:$result to &quot;Frog&quot;)
@@ -312,15 +333,15 @@ I am very interested in knowing more about your tribe, traditions and how you li
 [[Accept]]
 [[Refuse]]](stop:)]
 &lt;/div&gt;
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/smartsound_ANIMAL_FROG_Frog_Call_Croak_01.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="14" name="Accept" tags="" position="1000,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/smartsound_ANIMAL_FROG_Frog_Call_Croak_01.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="14" name="Accept" tags="tents" position="1000,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.
 I have the chance to visit some tents and eat some food. ](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.8]]](stop:)] 
 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="15" name="Refuse" tags="" position="1125,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I free the frog saying that it would be better if it lived in its natural background.](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="15" name="Refuse" tags="tents" position="1125,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I free the frog saying that it would be better if it lived in its natural background.](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.
 I have the chance to visit some tents and eat some food.](stop:)] 
 (live: 4s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.8]]](stop:)] 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="16" name=" 1.8" tags="" position="1000,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="16" name=" 1.8" tags="tents" position="1000,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird.](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Dances]]
@@ -353,7 +374,7 @@ After the medicine-men finished the ceremonies, each warrior painted his hand re
 &lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="20" name=" 1.15" tags="" position="1125,1150" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I give them a telescope as a gift. By doing this, I hope that their anger will be replaced by enchantment and they will forgive me for the mistake that I have made. ](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.16]]](stop:)] 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="21" name=" 1.16" tags="" position="1125,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="21" name=" 1.16" tags="telescope" position="1125,1275" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. ](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt; 1.17]]](stop:)] 
 &lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="22" name=" 1.17" tags="pipa" position="1125,1400" size="100,100">(set:$result to &quot;Calumet&quot;)
@@ -363,9 +384,9 @@ At first, I don&#39;t get why he had such a reaction, then the others tell me th
 (live: 5s)[(t8n:&quot;dissolve&quot;)[What do I do now?
 [[Accept the gift]]
 [[Refuse the gift]]](stop:)]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="23" name="Accept the gift" tags="" position="1250,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="23" name="Accept the gift" tags="tents" position="1250,1525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I wander around the village a little bit more.](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt;1.19]]](stop:)] 
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="24" name="Refuse the gift" tags="" position="1250,1400" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I do not accept the gift because I am sympathetic with him.](stop:)]
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="24" name="Refuse the gift" tags="tents" position="1250,1400" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I do not accept the gift because I am sympathetic with him.](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[[[Continue -&gt;1.19]]](stop:)] 
 &lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="25" name="Diary" tags="capellini" position="1575,150" size="100,100">A mirror reflects my image: I impersonate Giovanni Capellini.
 
@@ -385,7 +406,7 @@ At first, I don&#39;t get why he had such a reaction, then the others tell me th
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png&quot; width=&quot;50px&quot;&gt;-&gt;0]]
 [[&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1024px-Flag_of_Italy.svg.png&quot; width=&quot;50&quot;&gt;-&gt;Utenti]]]
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="28" name="1.19" tags="" position="1275,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
+</tw-passagedata><tw-passagedata pid="28" name="1.19" tags="tents" position="1275,1650" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird.](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[
 [[Dances]]
@@ -458,7 +479,7 @@ The child sees my reaction and thinks that I am there to talk to the chieftain s
 
 [[Continue -&gt;parlo]]
 &lt;/div&gt;
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.50%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="33" name="choice" tags="" position="1500,700" size="100,100">Ne-ki-ga-kuh:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.50%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="33" name="choice" tags="talking" position="1500,700" size="100,100">Ne-ki-ga-kuh:
 What do I do?
 (if: $e is &gt; 0 or $f is &gt; 0) [You have already made your decision](else:) [
 (link: &quot;Do I listen to what the man has to tell me?&quot;)[\
@@ -481,14 +502,14 @@ What do I do?
 	(go-to: &quot;choice&quot;)\
 ]]
 (if: $e is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]](if: $e is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]](if: $f is &gt; 0 and $g is &gt; 0)  [[Continue -&gt;capellini]](if: $f is &gt; 0 and $h is &gt; 0)  [[Continue -&gt;children]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="34" name="capellini" tags="" position="1425,825" size="100,100">Capellini: 
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="34" name="capellini" tags="talking" position="1425,825" size="100,100">Capellini: 
 I am an italian scientist, I have traveled through the &quot;great waters&quot; to come here to study rocks and fossils.
 I was very curious to visit a sandstone quarry nearby and so I decided to come here and meet your tribe. 
 I am very interested in knowing more about your tribe, traditions and how you live in close contact with nature. You know, I&#39;ve studied it all my life but I have never experienced such a a special connection with it in my daily life. So I&#39;d like to learn that from you. 
 
 [[Continue -&gt;2.4]]
 (set:$capellini to &quot;capellini&quot;)
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="35" name="children" tags="" position="1600,825" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="35" name="children" tags="talking" position="1600,825" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
 Ne-ki-ga-huh:
 I explain that the children are separated from their parents and sent to the mission to learn english and the christian religion.
 
@@ -546,7 +567,7 @@ Ne-ki-ga-huh:
 The stranger shows us the finished portrait and it&#39;s really well done. 
 He decides to gift us an object that I&#39;ve never seen before. 
 
-[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="40" name=" 2.06" tags="" position="1600,1225" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
+[[Continue -&gt; 2.6]]</tw-passagedata><tw-passagedata pid="40" name=" 2.06" tags="telescope" position="1600,1225" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Capellini:
 The indians are so surprised by my gift, and so almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
@@ -582,7 +603,7 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $m is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
 (if: $n is &gt; 0 and $q is &gt; 0)  [[Continue-&gt;Accept2]]
 (if: $n is &gt; 0 and $r is &gt; 0)  [[Continue-&gt;Refuse2]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="42" name=" 2.6" tags="" position="1425,1225" size="100,100">Capellini:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="42" name=" 2.6" tags="telescope" position="1425,1225" size="100,100">Capellini:
 The indians are so surprised by my gift, I can perceive that actually they&#39;re not angry at me anymore. Almost every member of the tribe gathers around the telescope and is eager to try it to admire the moon. 
 
 Ne-ki-ga-huh:
@@ -617,14 +638,14 @@ The indians decide to give me a (print: $result).  What do I do?
 (if: $i is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
 (if: $l is &gt; 0 and $o is &gt; 0)  [[Continue-&gt;Accept1]]
 (if: $l is &gt; 0 and $p is &gt; 0)  [[Continue-&gt;Refuse1]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="44" name="Accept1" tags="" position="1525,1475" size="100,100">Capellini:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="44" name="Accept1" tags="tents" position="1525,1475" size="100,100">Capellini:
 The chieftain orders a man to give me his (print: $result).
 The native is very reluctant and starts crying as soon as I get the (print: $result) in my hands. 
 At first, I don&#39;t get why he had such a reaction, then the others tell me that the object had a sentimental value that could not be replaced. 
 [[Continue-&gt;End]]
 (set: $i to 0)
 (set:$l to 0)
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="45" name="Refuse1" tags="startup" position="1375,1475" size="100,100">(set: $i to 0)(set:$l to 0)
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="45" name="Refuse1" tags="tents" position="1375,1475" size="100,100">(set: $i to 0)(set:$l to 0)
 Capellini:
 I don&#39;t accept the gift because these people are living in extreme poverty. 
 If I accepted a gift, one of the indians had to give up one of their belongings. 
@@ -634,7 +655,7 @@ I accept the (print: $result).
 I&#39;m very happy that I can bring home with me something that will remind of this moment.
 I wander around the village a little bit more.
 [[Continue -&gt;end1]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="47" name="Refuse2" tags="" position="1725,1475" size="100,100">(if: $result is &quot;mocassin&quot;)[Capellini:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="47" name="Refuse2" tags="tents" position="1725,1475" size="100,100">(if: $result is &quot;mocassin&quot;)[Capellini:
 I don&#39;t accept the gift because these people are living in extreme poverty. 
 If I accepted a gift, one of the indians had to give up one of their belongings. ]
 (else:)
@@ -642,7 +663,7 @@ If I accepted a gift, one of the indians had to give up one of their belongings.
 
 I wander around the village a little bit more.]
 [[Continue -&gt;end1]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="48" name="End" tags="" position="1475,1600" size="100,100">Capellini:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="48" name="End" tags="tents" position="1475,1600" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
@@ -655,7 +676,7 @@ I sit down and start thinking about the future of my tribe.
 In this way, our tribe and our culture will soon disappear...&quot;
 
 [[Continue -&gt;indianend]]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="49" name="end1" tags="" position="1850,1475" size="100,100">Capellini:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/WhatsApp%20Audio%202023-06-09%20at%206.01.52%20PM.mpeg&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="49" name="end1" tags="tents" position="1850,1475" size="100,100">Capellini:
 What do I do now?
 I can decide to know a little bit more about the traditional dances or I can sit around the fire and hear a man telling the story of Black Bird. 
 
@@ -673,7 +694,9 @@ In this way, our tribe and our culture will soon disappear...&quot;
 
 Which encounter did the experience bring to your mind?
  (input-box: bind $code, &quot;XXX=&quot;)&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name=" Continue2" tags="form" position="1425,2050" size="100,100">&lt;div class=&quot;box-container&quot;&gt;&lt;p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name=" Continue2" tags="form" position="1425,2050" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+	&lt;h1&gt;A few more questions...&lt;/h1&gt;
+	&lt;p&gt;
       1. Which color better describes your experience?
       (checkbox: bind $green, &quot;green&quot;) 
       (checkbox: bind $red, &quot;red&quot;) 
