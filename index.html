@@ -48,6 +48,13 @@ tw-story[tags="arrival"] {
   background-position: relative;
   margin-left: auto;
 }
+tw-story[tags="arrivo"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/capellini%20see%20the%20village.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
 tw-story[tags="mappa"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/thumbnail_IMG_3099.jpg?raw=true');
   background-position:50% 50%;
@@ -78,6 +85,13 @@ tw-story[tags="indiano"] {
   margin-left: auto;
 }
 tw-story[tags="bambini"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/BD%20sees%20Cap%20and%20kid.jpg?raw=true');
+  background-position:50% 50%;
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-story[tags="children"] {
   background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/BD%20sees%20Cap%20and%20kid.jpg?raw=true');
   background-position:50% 50%;
   background-size:cover;
@@ -344,7 +358,7 @@ tw-passage[tags="card"] p{
 
 
 (live: 5s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.2]](stop:)]
-</tw-passagedata><tw-passagedata pid="5" name=" 1.2" tags="" position="1000,525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I reach the indigenous village with an interpreter and I glance at the tents and horses. ](stop:)]
+</tw-passagedata><tw-passagedata pid="5" name=" 1.2" tags="arrivo" position="1000,525" size="100,100">(live: 0s)[(t8n:&quot;dissolve&quot;)[I reach the indigenous village with an interpreter and I glance at the tents and horses. ](stop:)]
 (live: 2s)[(t8n:&quot;dissolve&quot;)[I can see the indigenous people dressed in the traditional way.](stop:)]
 (live: 4s)[(t8n:&quot;dissolve&quot;)[There&#39;s a man outside the biggest tent that seems to be the chieftain.](stop:)]
 (live: 6s)[(t8n:&quot;dissolve&quot;)[What do I do?](stop:)]
@@ -543,7 +557,7 @@ I am very curious about this &quot;pale face&quot; because he has lots of object
 
 [[Continue-&gt;choice]]
 &lt;/div&gt;
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="32" name="osservo" tags="bambini" position="1600,575" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Ne-ki-ga-huh:
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="32" name="osservo" tags="children" position="1600,575" size="100,100">&lt;div class=&quot;box-container&quot;&gt;Ne-ki-ga-huh:
 Suddenly a child approaches the stranger and so I have the chance to study his behavior towards the members of our tribe. 
 
 Capellini:
@@ -945,9 +959,10 @@ Whenever you’re visiting a country, you’re always paying attention to make s
 (else-if: $l is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-4&#39;);&lt;/script&gt;]
 (if: $m is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-3&#39;);&lt;/script&gt;]
 (else-if: $n is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-2&#39;);&lt;/script&gt;]
-</tw-passagedata><tw-passagedata pid="54" name="I go there and talk to him" tags="start" position="1000,650" size="100,100">&lt;div class=&quot;video-container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="54" name="I go there and talk to him" tags="" position="1000,650" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
+&lt;div class=&quot;video-container&quot;&gt;
 &lt;video autoplay muted loop poster=&quot;cake.jpg&quot; id=&quot;bgvid&quot;&gt;
-    &lt;source src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/background-images/Fireplace.mp4&quot; type=&quot;video/webm&quot;&gt;
+&lt;source src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/background-images/Fireplace.mp4&quot; type=&quot;video/webm&quot;&gt;
 &lt;/video&gt;(live: 0s)[(t8n:&quot;dissolve&quot;)[We exchange a respectful greeting and then we sit in front of each other, near the fire.](stop:)]
 
 (live: 2s)[(t8n:&quot;dissolve&quot;)[I am very curious because I have never encountered an indigenous tribe before, so I ask the chieftain what his name was and some more information about his tribe.](stop:)] 
@@ -955,7 +970,8 @@ Whenever you’re visiting a country, you’re always paying attention to make s
 (live: 5s)[(t8n:&quot;dissolve&quot;)[He answers that his name is Ne-hi-ga-kuh and he&#39;s the chieftain of the Ponkas tribe. His tribe is temporarily allied with the Omahas and so they have been invited to stay at Black Bird because they did not want to fight in the war and their harvest was rotten.](stop:)]
 
 (live: 6s)[(transition-arrive:&quot;dissolve&quot;)[[Continue -&gt; 1.3]](stop:)]
-&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;</tw-passagedata><tw-passagedata pid="55" name="0" tags="place" position="875,25" size="100,100">Which stop of Capellini&#39;s journey in Northern America do you want to focus on?
+&lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="0" tags="place" position="875,25" size="100,100">Which stop of Capellini&#39;s journey in Northern America do you want to focus on?
 [[Nebraska -&gt;Users]]
 </tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
