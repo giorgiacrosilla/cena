@@ -310,6 +310,25 @@ tw-passage[tags="card"] h1{
 tw-passage[tags="card"] p{
    margin-left: 8px;
 }
+tw-story[tags="form1"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/immagine1.jpg?raw=true');
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
+tw-passage[tags="form1"]{
+  position: absolute;
+  left: 25%;
+  right: 15%;
+  top: 0%;
+  bottom:0%;
+}
+tw-story[tags="final"] {
+  background-image:url('https://github.com/giorgiacrosilla/cena/blob/main/background-images/night%20sky.jpg?raw=true');
+  background-size:cover;
+  background-position: relative;
+  margin-left: auto;
+}
 /* width */
 ::-webkit-scrollbar {
   background:transparent;
@@ -796,7 +815,7 @@ In this way, our tribe and our culture will soon disappear...&quot;
       (checkbox: bind $blue, &quot;blue&quot;) 
 
 
-      2. Which color better describes your experience?
+      2. Which emotion would you associate to the experience?
       (checkbox: bind $surprise, &quot;surprise&quot;) 
       (checkbox: bind $resentment, &quot;resentment&quot;) 
       (checkbox: bind $hope, &quot;hope&quot;) 
@@ -807,8 +826,8 @@ In this way, our tribe and our culture will soon disappear...&quot;
       (checkbox: bind $rel, &quot;Relationship man-nature&quot;) 
       (checkbox: bind $political, &quot;Political and social change&quot;) 
       (checkbox: bind $imm, &quot;Immersion in a different culture&quot;) 
-
-      &lt;span class=&#39;red&#39;&gt;[[Continue-&gt;continue3]]&lt;/span&gt;&lt;/p&gt;
+      
+      &lt;span class=&#39;red&#39;&gt;[[Continue-&gt;continue3.1]]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="continue3" tags="card" position="1425,2200" size="100,100">&lt;div class=&quot;box-container&quot;&gt;
 (if:$capellini is &quot;capellini&quot;)[&lt;h1&gt;Tourist&lt;/h1&gt;]
 (else-if:$capellini is &quot;children&quot;)[&lt;h1&gt;Explorer&lt;/h1&gt;]
@@ -952,7 +971,7 @@ Whenever you’re visiting a country, you’re always paying attention to make s
 (else-if:$capellini is &quot;capellini&quot; and $blue is true and $anger is true)[ You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, your soul is very perceptive about political and social injustices.]
 (else-if:$capellini is &quot;capellini&quot; and $blue is true and $resentment is true)[ You’ve chosen blue as the color that represents the experience the most. This means that you’re a very spiritual and sensitive person, your soul is very perceptive about political and social injustices.]}
 
-(link: &quot;Let us know your feedback!&quot;)[(goto-url: &#39;https://docs.google.com/forms/d/1wYmKK1XX4-a_h85IS58chDEUk7ZSUvAjCU5sH9IDzLc/edit&#39;)]&lt;/p&gt;
+[[Continue -&gt; finalsky]]&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="Health Based Styling" tags="footer" position="1150,1825" size="100,100">(if: $i is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-1&#39;);&lt;/script&gt;]
 (else-if: $l is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-4&#39;);&lt;/script&gt;]
 (if: $m is 1)[&lt;script&gt;$(&#39;tw-story&#39;).addClass(&#39;health-3&#39;);&lt;/script&gt;]
@@ -971,7 +990,10 @@ Whenever you’re visiting a country, you’re always paying attention to make s
 &lt;audio autoplay src=&quot;https://github.com/giorgiacrosilla/cena/raw/main/mp3/nature_fire_burning_crackle_fireplace.mp3&quot;&gt; &lt;/audio&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="0" tags="place" position="875,25" size="100,100">Which stop of Capellini&#39;s journey in Northern America do you want to focus on?
 [[Nebraska -&gt;Users]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="56" name="continue3.1" tags="form1" position="1575,2125" size="100,100">&lt;iframe src=&quot;https://docs.google.com/forms/d/e/1FAIpQLSeXWg0PEUSuNaEHOkLLlr7OeKWxGQdr49m_LV0OVoDVITJTwQ/viewform?embedded=true&quot; width=&quot;640&quot; height=&quot;584&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot;&gt;&lt;/iframe&gt;
+[[Continue -&gt;continue3]] 
+
+</tw-passagedata><tw-passagedata pid="57" name=" finalsky" tags="final" position="1425,2325" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
