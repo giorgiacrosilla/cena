@@ -2,7 +2,7 @@
 
 Interaction Media Design project by Giorgia Crosilla and Erica Andreose
 
-Group name: The Mooming
+Group name: The Moomin
 
 
 <img src="https://github.com/giorgiacrosilla/cena/blob/main/unreal%20engine%20screenshot/bkgr.jpg" width="400"/>
