@@ -3,7 +3,7 @@
 ### Interaction Media Design project by Giorgia Crosilla and Erica Andreose
 ### Group name: The Mooming
 
-!(https://github.com/giorgiacrosilla/cena/blob/main/background-images/immagine1.jpg)
+!(background-images/immagine1.jpg)
 
 Experience link: https://giorgiacrosilla.github.io/cena/
 
