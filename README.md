@@ -1,6 +1,9 @@
-CENA - Capellini Encounters Native Americans
+# CENA - Capellini Encounters Native Americans
 
-Interaction Media Design by Giorgia Crosilla and Erica Andreose
+# # # Interaction Media Design project by Giorgia Crosilla and Erica Andreose
+# # # Group name: The Mooming
+
+(https://github.com/giorgiacrosilla/cena/blob/main/background-images/immagine1.jpg)
 
 Experience link: https://giorgiacrosilla.github.io/cena/
 
